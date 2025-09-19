@@ -1,4 +1,54 @@
 {
   "applicationName": "MyApp",
-  "maxInactiveTime": 300
+  "TempoMaximoAfk": 120,
+  "TempoMaximoTelaFinal": 120,
+  "TempoDeJogo": 120,
+  "PalavrasDoJogo": {
+    "TodasAsPalavras": [
+      "Aurora",
+      "Horizonte",
+      "Luminária",
+      "Serenidade",
+      "Cascata",
+      "Labirinto",
+      "Carrossel",
+      "Névoa",
+      "Relâmpago",
+      "Melodia",
+      "Estrela",
+      "Cobalto",
+      "Fragmento",
+      "Tempestade",
+      "Cristal",
+      "Abismo",
+      "Harmonia",
+      "Pêndulo",
+      "Travessia",
+      "Brisa"
+    ],
+    "PalavrasCorretasAzul": [
+      "Montanha",
+      "Borboleta",
+      "Oceano",
+      "Jasmim",
+      "Nebulosa",
+      "Sinfonia",
+      "Orvalho",
+      "Planície",
+      "Coral",
+      "Esmeralda"
+    ],
+    "PalavrasCorretasVermelho": [
+      "Vulcão",
+      "Safira",
+      "Horizonteiro",
+      "Galáxia",
+      "Mosaico",
+      "Turbilhão",
+      "Catedral",
+      "Floresta",
+      "Auréola",
+      "Labareda"
+    ]
+  }
 }

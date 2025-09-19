@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using _1._Project.Scripts.StateMachine;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -9,6 +10,9 @@ using UnityEngine;
 [RequireComponent(typeof(CanvasGroup))]
 public class CanvasScreen: MonoBehaviour
 {
+    public StatesNames.States PreviousStateNames;
+    public StatesNames.States StateName;
+    public StatesNames.States NextStateNames;
     [System.Serializable]
     public class ScreenData
     {
@@ -23,9 +27,11 @@ public class CanvasScreen: MonoBehaviour
     [Tooltip("Toda tela deve ter uma base de canvas group")]
     public CanvasGroup canvasgroup;
     [SerializeField] protected ScreenData data;
-    public ScreenData screenData;
     public virtual void OnValidate()
     {
+        data.previusScreenName = StatesNames.GetStateByName(PreviousStateNames);
+        data.screenName = StatesNames.GetStateByName(StateName);
+        data.nextScreenName = StatesNames.GetStateByName(NextStateNames);
         if (canvasgroup == null)
         {
             canvasgroup = GetComponent<CanvasGroup>();
