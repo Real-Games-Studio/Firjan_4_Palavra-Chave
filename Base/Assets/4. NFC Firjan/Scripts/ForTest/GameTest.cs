@@ -116,13 +116,18 @@ namespace _4._NFC_Firjan.Scripts.Helper
 			ServerDebugGetGame.text = $"Resposta: {a.Result.ToString()}";
 		}
 
-		public void GetInfo()
+		public void GetCardInfo()
+		{
+			EndGameResponseModel = serverComunication.GetCardInfo(NfcId).Result;
+		}
+
+		public void GetFinalGameInfo()
 		{
 			var gm = new EndGameRequestModel
 			{
 				name = Name
 			};
-			EndGameResponseModel = serverComunication.GetEndGameInfo(gm, NfcId).Result;
+			EndGameResponseModel = serverComunication.PostNameForEndGameInfo(gm, NfcId).Result;
 		}
 
 		public string DebugTextEndGame()
