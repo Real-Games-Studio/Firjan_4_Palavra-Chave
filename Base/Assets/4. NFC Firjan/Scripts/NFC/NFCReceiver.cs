@@ -7,28 +7,41 @@ namespace _4._NFC_Firjan.Scripts.NFC
 {
 	public class NFCReceiver : MonoBehaviour
 	{
-		
-		public UnityEvent<string> OnNFCConnected;
+		/// <summary>
+		/// Evento chamado quando o Nfc é encostado no leitor
+		/// </summary>
+		/// <returns><see cref="string">Nome do nfc</see>,<see cref="string">Nome do leitor</see></returns>
+		public UnityEvent<string,string> OnNFCConnected;
+		/// <summary>
+		/// Evento chamado quando o Nfc é desencostado do leitor
+		/// </summary>
 		public UnityEvent OnNFCDisconnected;
+		/// <summary>
+		/// Evento chamado quando o Leitor de Nfc é conectado do windows
+		/// </summary>
+		/// <returns><see cref="string">Nome do leitor</see></returns>
 		public UnityEvent<string> OnNFCReaderConnected;
+		/// <summary>
+		/// Evento chamado quando o Leitor de nfc é desconectado do windoes
+		/// </summary>
 		public UnityEvent OnNFCReaderDisconected;
-		private  Cardreader _cardreader = new Cardreader();
+		private  Cardreader _cardReader = new Cardreader();
 
 		private void Awake()
 		{
-			_cardreader.CardConnected += OnCardConnectedHandler;
-			_cardreader.CardDisconnected += OnCardDisconnectedHandler;
-			_cardreader.CardreaderConnected += OnCardreaderConnectedHandler;
-			_cardreader.CardreaderDisconnected += OnCardreaderDisconnectedHandler;
-			_cardreader.StartWatch();
+			_cardReader.CardConnected += OnCardConnectedHandler;
+			_cardReader.CardDisconnected += OnCardDisconnectedHandler;
+			_cardReader.CardreaderConnected += OnCardReaderConnectedHandler;
+			_cardReader.CardreaderDisconnected += OnCardReaderDisconnectedHandler;
+			_cardReader.StartWatch();
 		}
 
-		private void OnCardreaderDisconnectedHandler(object sender, CardreaderEventArgs e)
+		private void OnCardReaderDisconnectedHandler(object sender, CardreaderEventArgs e)
 		{
 			OnNFCReaderDisconected.Invoke();
 		}
 
-		private void OnCardreaderConnectedHandler(object sender, CardreaderEventArgs e)
+		private void OnCardReaderConnectedHandler(object sender, CardreaderEventArgs e)
 		{
 			OnNFCReaderConnected.Invoke(e.CardreaderName);
 		}
@@ -40,12 +53,12 @@ namespace _4._NFC_Firjan.Scripts.NFC
 
 		private void OnCardConnectedHandler(object sender, CardreaderEventArgs e)
 		{
-			OnNFCConnected.Invoke(e.Card.Id);
+			OnNFCConnected.Invoke(e.Card.Id,e.CardreaderName);
 		}
 
 		private void OnDestroy()
 		{
-			_cardreader.StopWatch();
+			_cardReader.StopWatch();
 		}
 	}
 }

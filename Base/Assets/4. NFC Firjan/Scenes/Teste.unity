@@ -4158,122 +4158,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1367103521}
   m_CullTransparentMesh: 1
---- !u!1 &1432172870
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1432172872}
-  - component: {fileID: 1432172871}
-  m_Layer: 0
-  m_Name: NFC
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1432172871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1432172870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77226fa7156b47a180f68a0e3563942a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnNFCConnected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1098314515}
-        m_TargetAssemblyTypeName: _4._NFC_Firjan.Scripts.Helper.GameTest, Assembly-CSharp
-        m_MethodName: CardConnected
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1098314515}
-        m_TargetAssemblyTypeName: _4._NFC_Firjan.Scripts.Helper.GameTest, Assembly-CSharp
-        m_MethodName: SetNfcId
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnNFCDisconnected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1098314515}
-        m_TargetAssemblyTypeName: _4._NFC_Firjan.Scripts.Helper.GameTest, Assembly-CSharp
-        m_MethodName: CardDisconnected
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnNFCReaderConnected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1098314515}
-        m_TargetAssemblyTypeName: _4._NFC_Firjan.Scripts.Helper.GameTest, Assembly-CSharp
-        m_MethodName: CardReaderConnected
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnNFCReaderDisconected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1098314515}
-        m_TargetAssemblyTypeName: _4._NFC_Firjan.Scripts.Helper.GameTest, Assembly-CSharp
-        m_MethodName: CardReaderDisconnected
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!4 &1432172872
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1432172870}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1442756970
 GameObject:
   m_ObjectHideFlags: 0
@@ -4552,52 +4436,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1641569838
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1641569839}
-  - component: {fileID: 1641569840}
-  m_Layer: 0
-  m_Name: Server
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1641569839
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641569838}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1641569840
+--- !u!114 &1641569840 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 9139395376421946703, guid: 4ccf58ddc1a4ae9488eb8f1cf750b130, type: 3}
+  m_PrefabInstance: {fileID: 7923714389177625461}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641569838}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 455f510067344d489a6ecdb6df7ba704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ip: 192.168.0.185
-  Port: 8080
 --- !u!1 &1662591020
 GameObject:
   m_ObjectHideFlags: 0
@@ -6033,14 +5882,148 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
+--- !u!1001 &7923714389177625461
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1821707466315993046, guid: 4ccf58ddc1a4ae9488eb8f1cf750b130, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821707466315993046, guid: 4ccf58ddc1a4ae9488eb8f1cf750b130, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821707466315993046, guid: 4ccf58ddc1a4ae9488eb8f1cf750b130, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821707466315993046, guid: 4ccf58ddc1a4ae9488eb8f1cf750b130, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821707466315993046, guid: 4ccf58ddc1a4ae9488eb8f1cf750b130, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821707466315993046, guid: 4ccf58ddc1a4ae9488eb8f1cf750b130, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821707466315993046, guid: 4ccf58ddc1a4ae9488eb8f1cf750b130, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821707466315993046, guid: 4ccf58ddc1a4ae9488eb8f1cf750b130, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821707466315993046, guid: 4ccf58ddc1a4ae9488eb8f1cf750b130, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821707466315993046, guid: 4ccf58ddc1a4ae9488eb8f1cf750b130, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6771630112835425676, guid: 4ccf58ddc1a4ae9488eb8f1cf750b130, type: 3}
+      propertyPath: m_Name
+      value: '[Adicionar na Cena] Server'
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4ccf58ddc1a4ae9488eb8f1cf750b130, type: 3}
+--- !u!1001 &8567648601450042437
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3859287491331945486, guid: 70fbc4c106242b94fab8b822d851bafd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859287491331945486, guid: 70fbc4c106242b94fab8b822d851bafd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859287491331945486, guid: 70fbc4c106242b94fab8b822d851bafd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859287491331945486, guid: 70fbc4c106242b94fab8b822d851bafd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859287491331945486, guid: 70fbc4c106242b94fab8b822d851bafd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859287491331945486, guid: 70fbc4c106242b94fab8b822d851bafd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859287491331945486, guid: 70fbc4c106242b94fab8b822d851bafd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859287491331945486, guid: 70fbc4c106242b94fab8b822d851bafd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859287491331945486, guid: 70fbc4c106242b94fab8b822d851bafd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859287491331945486, guid: 70fbc4c106242b94fab8b822d851bafd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6950869784751064817, guid: 70fbc4c106242b94fab8b822d851bafd, type: 3}
+      propertyPath: m_Name
+      value: '[Adicionar na Cena] NFC'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8452856788087629536, guid: 70fbc4c106242b94fab8b822d851bafd, type: 3}
+      propertyPath: OnNFCConnected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1098314515}
+    - target: {fileID: 8452856788087629536, guid: 70fbc4c106242b94fab8b822d851bafd, type: 3}
+      propertyPath: OnNFCConnected.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1098314515}
+    - target: {fileID: 8452856788087629536, guid: 70fbc4c106242b94fab8b822d851bafd, type: 3}
+      propertyPath: OnNFCDisconnected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1098314515}
+    - target: {fileID: 8452856788087629536, guid: 70fbc4c106242b94fab8b822d851bafd, type: 3}
+      propertyPath: OnNFCReaderConnected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1098314515}
+    - target: {fileID: 8452856788087629536, guid: 70fbc4c106242b94fab8b822d851bafd, type: 3}
+      propertyPath: OnNFCReaderDisconected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1098314515}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 70fbc4c106242b94fab8b822d851bafd, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1315477280}
   - {fileID: 629050206}
-  - {fileID: 1432172872}
-  - {fileID: 1641569839}
+  - {fileID: 8567648601450042437}
+  - {fileID: 7923714389177625461}
   - {fileID: 1098314516}
   - {fileID: 1565058205}
   - {fileID: 649979654}

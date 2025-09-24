@@ -62,7 +62,7 @@ namespace _4._NFC_Firjan.Scripts.Helper
 			ServerDebugGetEndGame.text = DebugTextEndGame();
 		}
 
-		public void SetNfcId(string nfcId)
+		public void SetNfcId(string nfcId,string cardReaderName)
 		{
 			NfcId = nfcId;
 		}
@@ -118,7 +118,7 @@ namespace _4._NFC_Firjan.Scripts.Helper
 
 		public void GetCardInfo()
 		{
-			EndGameResponseModel = serverComunication.GetCardInfo(NfcId).Result;
+			EndGameResponseModel = serverComunication.GetNfcInfo(NfcId).Result;
 		}
 
 		public void GetFinalGameInfo()

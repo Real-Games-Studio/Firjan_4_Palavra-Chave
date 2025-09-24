@@ -2,11 +2,11 @@
 {
 	public class GameModel
 	{
-		public string nfcId;
-		public int gameId;
-		public int skill1;
-		public int skill2;
-		public int skill3;
+		public string nfcId { get; set; }
+		public int gameId { get; set; }
+		public int skill1 { get; set; }
+		public int skill2 { get; set; }
+		public int skill3 { get; set; }
 
 		public override string ToString()
 		{
