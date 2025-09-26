@@ -1,15 +1,37 @@
 {
+  "IP" : "192.168.0.185",
+  "Porta" : 8080,
+  "IdDoJogo" : 4,
   "applicationName": "MyApp",
   "TempoMaximoAfk": 120,
   "TempoMaximoTelaFinal": 5,
   "TempoDeJogo": 120,
-  "PalavrasDoJogo": {
-    "Grupo1": ["casa", "carro", "arvore", "garagem"],
-    "Grupo2": ["computador", "telefone", "internet", "tecnologia"],
-    "Grupo3": ["programacao", "desenvolvimento", "software", "windows"],
-    "Grupo4": ["musica", "filme", "livro", "arte"],
-    "Grupo5": ["esporte", "futebol", "basquete", "tenis"],
-    "Grupo6": ["viagem", "ferias", "aventura", "exploracao"],
-    "Grupo7": ["comida", "restaurante", "culinaria", "gourmet"]
+  "PalavrasGrupo1" : {
+    "Tema" : "Bioma e Natureza",
+    "Palavras" : ["Catinga", "Floresta", "Mar", "Pantanal"]
+  },
+  "PalavrasGrupo2" : {
+    "Tema" : "Tecnologia e Digitalização",
+    "Palavras" : ["Dados", "Rede", "Código", "Sistema"]
+  },
+  "PalavrasGrupo3" : {
+    "Tema" : "Sociedade e Comunidade",
+    "Palavras" : ["Cidade", "Trabalho", "Cultura", "Mobilidade"]
+  },
+  "PalavrasGrupo4" : {
+    "Tema" : "Meio ambiente e Sustentabilidade",
+    "Palavras" : ["Clima", "Energia", "Reciclagem", "Resíduo"]
+  },
+  "PalavrasGrupo5" : {
+    "Tema" : "Habilidades do Futuro",
+    "Palavras" : ["Empatia", "Curiosidade", "Liderança", "Criatividade"]
+  },
+  "PalavrasGrupo6" : {
+    "Tema" : "Física e Química",
+    "Palavras" : ["Molécula", "Gravidade", "Oxigênio", "Inércia"]
+  },
+  "PalavrasGrupo7" : {
+    "Tema" : "Espaço e Astronomia",
+    "Palavras" : ["Planeta", "Estrela", "Órbita", "Galáxia"]
   }
 }

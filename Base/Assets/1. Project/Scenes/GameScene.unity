@@ -916,7 +916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1167,6 +1167,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 91074182}
+  - {fileID: 1780742099}
+  - {fileID: 1840345059}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1441261833
@@ -1544,6 +1546,7 @@ GameObject:
   - component: {fileID: 1769649548}
   - component: {fileID: 1769649550}
   - component: {fileID: 1769649549}
+  - component: {fileID: 1769649551}
   m_Layer: 5
   m_Name: FinalState
   m_TagString: Untagged
@@ -1606,6 +1609,137 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1769649551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769649547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d06f8e0c8fae404fb2fc41e36a75ca9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LastNFCConnected: 
+  GameController: {fileID: 1567814325}
+  ServerComunication: {fileID: 1780742100}
+  TextPoints: {fileID: 1168163291}
+--- !u!1 &1780742098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1780742099}
+  - component: {fileID: 1780742100}
+  m_Layer: 0
+  m_Name: Server
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1780742099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780742098}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1268018938}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1780742100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780742098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 455f510067344d489a6ecdb6df7ba704, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ip: 
+  Port: 0
+--- !u!1 &1840345058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1840345059}
+  - component: {fileID: 1840345060}
+  m_Layer: 0
+  m_Name: NFC
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1840345059
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840345058}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1268018938}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1840345060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840345058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77226fa7156b47a180f68a0e3563942a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnNFCConnected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1769649551}
+        m_TargetAssemblyTypeName: _1._Project.Scripts.GameMechanics.FinalPoints,
+          Assembly-CSharp
+        m_MethodName: GetNfcUser
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnNFCDisconnected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnNFCReaderConnected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnNFCReaderDisconected:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &4069645954711495912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1802,6 +1936,10 @@ PrefabInstance:
       propertyPath: CountText
       value: 
       objectReference: {fileID: 261608237}
+    - target: {fileID: 3476944036514023013, guid: 872a234482cb52341bc48f5e2df02ce7, type: 3}
+      propertyPath: FinalPoints
+      value: 
+      objectReference: {fileID: 1769649551}
     - target: {fileID: 4663416007269727246, guid: 872a234482cb52341bc48f5e2df02ce7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
