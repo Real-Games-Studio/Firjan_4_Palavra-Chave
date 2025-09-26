@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace _1._Project.Scripts.StateMachine
 {
@@ -36,7 +37,12 @@ namespace _1._Project.Scripts.StateMachine
 		{
 			GoToIdle();
 		}
-		
+
+		private void Update()
+		{
+			_currentState.UpdateState();
+		}
+
 		private void SwitchState(IBaseState nextState)
 		{
 			if (_currentState != null)

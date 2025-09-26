@@ -9,7 +9,7 @@ namespace _1._Project.Scripts.CanvasScreen
 
 		public override void TurnOn()
 		{
-			GameController.GetWordsToSides();
+			GameController.FillBoard1();
 			base.TurnOn();
 		}
 	}

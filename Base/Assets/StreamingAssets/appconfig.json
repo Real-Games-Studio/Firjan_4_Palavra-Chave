@@ -1,54 +1,15 @@
 {
   "applicationName": "MyApp",
   "TempoMaximoAfk": 120,
-  "TempoMaximoTelaFinal": 120,
+  "TempoMaximoTelaFinal": 5,
   "TempoDeJogo": 120,
   "PalavrasDoJogo": {
-    "TodasAsPalavras": [
-      "Aurora",
-      "Horizonte",
-      "Luminária",
-      "Serenidade",
-      "Cascata",
-      "Labirinto",
-      "Carrossel",
-      "Névoa",
-      "Relâmpago",
-      "Melodia",
-      "Estrela",
-      "Cobalto",
-      "Fragmento",
-      "Tempestade",
-      "Cristal",
-      "Abismo",
-      "Harmonia",
-      "Pêndulo",
-      "Travessia",
-      "Brisa"
-    ],
-    "PalavrasCorretasAzul": [
-      "Montanha",
-      "Borboleta",
-      "Oceano",
-      "Jasmim",
-      "Nebulosa",
-      "Sinfonia",
-      "Orvalho",
-      "Planície",
-      "Coral",
-      "Esmeralda"
-    ],
-    "PalavrasCorretasVermelho": [
-      "Vulcão",
-      "Safira",
-      "Horizonteiro",
-      "Galáxia",
-      "Mosaico",
-      "Turbilhão",
-      "Catedral",
-      "Floresta",
-      "Auréola",
-      "Labareda"
-    ]
+    "Grupo1": ["casa", "carro", "arvore", "garagem"],
+    "Grupo2": ["computador", "telefone", "internet", "tecnologia"],
+    "Grupo3": ["programacao", "desenvolvimento", "software", "windows"],
+    "Grupo4": ["musica", "filme", "livro", "arte"],
+    "Grupo5": ["esporte", "futebol", "basquete", "tenis"],
+    "Grupo6": ["viagem", "ferias", "aventura", "exploracao"],
+    "Grupo7": ["comida", "restaurante", "culinaria", "gourmet"]
   }
 }

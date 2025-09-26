@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.26226407, b: 0.30373505, a: 1}
+  m_Color: {r: 0.26274514, g: 0.37426963, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -138,8 +138,9 @@ MonoBehaviour:
   IsSelected: 0
   IsRight: 0
   BorderRight: {r: 0.6100041, g: 1, b: 0.39811313, a: 1}
-  BorderWrong: {r: 1, g: 0.9296168, b: 0.2245282, a: 1}
-  BorderDefault: {r: 0, g: 0, b: 0, a: 0}
+  BorderWrong: {r: 1, g: 0.28455704, b: 0.2235294, a: 1}
+  BorderDefault: {r: 1, g: 1, b: 1, a: 1}
+  BorderSelected: {r: 1, g: 0.92941177, b: 0.22352941, a: 1}
 --- !u!1 &2151865578878769868
 GameObject:
   m_ObjectHideFlags: 0

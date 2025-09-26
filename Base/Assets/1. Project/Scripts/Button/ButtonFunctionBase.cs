@@ -27,5 +27,7 @@ namespace _1._Project.Scripts.Button
 	{
 		StartGame,
 		ChooseWord,
+		EndGame,
+		RestartGame
 	}
 }

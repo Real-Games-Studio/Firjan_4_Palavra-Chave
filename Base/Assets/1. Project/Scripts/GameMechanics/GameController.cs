@@ -1,35 +1,92 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using _1._Project.Scripts.Button;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _1._Project.Scripts.GameMechanics
 {
 	public class GameController : MonoBehaviour
 	{
-		public SideController BlueSide;
-		public SideController RedSide;
+		[FormerlySerializedAs("BlueSide")] public SideController BoardSide;
 
-		public List<string> RedWallWords;
-		public List<string> BlueWallWords;
-		public List<string> RandomWords;
-		public List<string> RightWordsRed;
-		public List<string> RightWordsBlue;
+		public List<string> Group1Words;
+		public List<string> Group2Words;
+		public List<string> Group3Words;
+		public List<string> Group4Words;
+		public List<string> Group5Words;
+		public List<string> Group6Words;
+		public List<string> Group7Words;
 		public bool IsFinished;
+
+		public int RightCount;
+		public int WrongCount;
+		public int AtualBoard;
+
+		public float TimeToReset = 3f;
+		public TextMeshProUGUI CountText;
 		private void Awake()
 		{
 			FillLists();
-			BlueSide.SetGameController(this);
-			RedSide.SetGameController(this);
+			BoardSide.SetGameController(this);
 		}
 
+		public void RightWords()
+		{
+			RightCount++;
+			StartCoroutine(WaitToResetWon());
+		}
+
+		public void WrongWords()
+		{
+			WrongCount++;
+			StartCoroutine(WaitToResetLose());
+		}
+
+		private void FixedUpdate()
+		{
+			CountText.text = $"Acertos: {RightCount}  Erros: {WrongCount}";
+		}
+
+		IEnumerator WaitToResetWon()
+		{
+			BoardSide.LockSide();
+			yield return new WaitForSeconds(TimeToReset);
+			
+			BoardSide.ResetSide();
+			FillNextBoard();
+		}
+		IEnumerator WaitToResetLose()
+		{
+			BoardSide.LockSide();
+			yield return new WaitForSeconds(TimeToReset);
+			
+			BoardSide.ResetSide();
+			if (WrongCount>=3)
+			{
+				FillNextBoard();
+			}
+			
+		}
 		public void CheckIfFinished()
 		{
-			if (RedSide.ButtonSelected1 != null 
-			    && BlueSide.ButtonSelected1 != null
-			    && RedSide.ButtonSelected2 != null 
-			    && BlueSide.ButtonSelected2 != null)
+			if(BoardSide.IsFinished())
 			{
 				IsFinished = true;
+				switch (AtualBoard)
+				{
+					case 1:
+						BoardSide.ShowFinalResult(Group1Words);
+						break;
+					case 2:
+						BoardSide.ShowFinalResult(Group2Words);
+						break;
+					case 3:
+						BoardSide.ShowFinalResult(Group3Words);
+						break;
+				}
 			}
 			else
 			{
@@ -37,43 +94,101 @@ namespace _1._Project.Scripts.GameMechanics
 			}
 		}
 
-		public bool CheckIfWordIsRight(SideController side, string word)
-		{
-			if (side == RedSide)
-			{
-				return RightWordsRed.Contains(word);
-			}
-			else
-			{
-				return RightWordsBlue.Contains(word);
-			}
-		}
 		private void FillLists()
 		{
-			RedWallWords = JsonSystem.JsonModel.wordsModel.CorrectWordsRed;
-			BlueWallWords = JsonSystem.JsonModel.wordsModel.CorrectWordsBlue;
-			RandomWords = JsonSystem.JsonModel.wordsModel.AllWords;
+			Group1Words = JsonSystem.JsonModel.wordsModel.Group1;
+			Group2Words = JsonSystem.JsonModel.wordsModel.Group2;
+			Group3Words = JsonSystem.JsonModel.wordsModel.Group3;
+			Group4Words = JsonSystem.JsonModel.wordsModel.Group4;
+			Group5Words = JsonSystem.JsonModel.wordsModel.Group5;
+			Group6Words = JsonSystem.JsonModel.wordsModel.Group6;
+			Group7Words = JsonSystem.JsonModel.wordsModel.Group7;
 		}
-		public void GetWordsToSides()
+		
+		public void FillNextBoard()
 		{
-			List<string> wordsToSideRed = new List<string>();
-			List<string> wordsToSideBlue = new List<string>();
-			for (int i = 0; i < 8; i++)
+			WrongCount = 0;
+			switch (AtualBoard)
 			{
-				wordsToSideRed.Add(RandomWords[i]);
-				wordsToSideBlue.Add(RandomWords[i+8]);
+				case 1:
+					FillBoard2();
+					break;
+				case 2:
+					FillBoard3();
+					break;
+				case 3:
+					GameOver();
+					break;
 			}
-
-			for (int i = 0; i < 2; i++)
-			{
-				wordsToSideRed.Add(RedWallWords[i]);
-				RightWordsRed.Add(RedWallWords[i]);
-				RightWordsBlue.Add(BlueWallWords[i]);
-				wordsToSideBlue.Add(BlueWallWords[i]);
-			}
-			
-			BlueSide.SetUpSideWords(wordsToSideBlue);
-			RedSide.SetUpSideWords(wordsToSideRed);
 		}
+
+		private void GameOver()
+		{
+			ButtonActions.OnClick?.Invoke(ButtonFunctionName.EndGame);
+		}
+
+		public void FillBoard1()
+		{
+			RightCount = 0;
+			WrongCount = 0;
+			AtualBoard = 1;
+			var allWords = new List<string>();
+			allWords.AddRange(Group1Words);
+			allWords.Add(Group2Words[0]);
+			allWords.Add(Group2Words[1]);
+			allWords.Add(Group3Words[0]);
+			allWords.Add(Group3Words[1]);
+			allWords.Add(Group4Words[0]);
+			allWords.Add(Group4Words[1]);
+			allWords.Add(Group5Words[0]);
+			allWords.Add(Group5Words[1]);
+			allWords.Add(Group6Words[0]);
+			allWords.Add(Group6Words[1]);
+			allWords.Add(Group7Words[0]);
+			allWords.Add(Group7Words[1]);
+			allWords.Shuffle();
+			BoardSide.SetUpSideWords(allWords);
+		}
+		public void FillBoard2()
+		{
+			AtualBoard = 2;
+			var allWords = new List<string>();
+			allWords.AddRange(Group2Words);
+			allWords.Add(Group3Words[0]);
+			allWords.Add(Group3Words[1]);
+			allWords.Add(Group4Words[1]);
+			allWords.Add(Group5Words[0]);
+			allWords.Add(Group1Words[0]);
+			allWords.Add(Group4Words[0]);
+			allWords.Add(Group6Words[1]);
+			allWords.Add(Group7Words[1]);
+			allWords.Add(Group5Words[1]);
+			allWords.Add(Group6Words[0]);
+			allWords.Add(Group7Words[0]);
+			allWords.Add(Group1Words[1]);
+			allWords.Shuffle();
+			BoardSide.SetUpSideWords(allWords);
+		}
+		public void FillBoard3()
+		{
+			AtualBoard = 3;
+			var allWords = new List<string>();
+			allWords.AddRange(Group3Words);
+			allWords.Add(Group2Words[0]);
+			allWords.Add(Group2Words[1]);
+			allWords.Add(Group4Words[1]);
+			allWords.Add(Group5Words[0]);
+			allWords.Add(Group1Words[0]);
+			allWords.Add(Group4Words[0]);
+			allWords.Add(Group6Words[1]);
+			allWords.Add(Group7Words[1]);
+			allWords.Add(Group5Words[1]);
+			allWords.Add(Group6Words[0]);
+			allWords.Add(Group7Words[0]);
+			allWords.Add(Group1Words[1]);
+			allWords.Shuffle();
+			BoardSide.SetUpSideWords(allWords);
+		}
+		
 	}
 }

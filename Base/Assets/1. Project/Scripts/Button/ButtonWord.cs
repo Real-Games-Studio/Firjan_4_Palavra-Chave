@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,6 +17,7 @@ namespace _1._Project.Scripts.Button
 		public Color BorderRight;
 		public Color BorderWrong;
 		public Color BorderDefault;
+		public Color BorderSelected;
 		private RawImage _borderRawImage;
 		private void OnValidate()
 		{
@@ -34,26 +36,40 @@ namespace _1._Project.Scripts.Button
 		public override void SetUp()
 		{
 			_borderRawImage = GetComponentsInChildren<RawImage>()[1];
-			BorderDefault = GetComponent<RawImage>().color;
 			_gORectTransform = GetComponent<RectTransform>();
 			_tMPRectTransform = _tmpGui.GetComponent<RectTransform>();
 			base.SetUp();
 		}
-
-		public void Select(bool isRight)
+		
+		public void Lock()
 		{
-			if (isRight)
+			GetComponent<UnityEngine.UI.Button>().interactable = false;
+		}
+
+		public void Unlock()
+		{
+			GetComponent<UnityEngine.UI.Button>().interactable = true;
+		}
+
+		public void Select()
+		{
+			IsSelected = true;
+			_borderRawImage.color = BorderSelected;
+		}
+
+		public void CheckWord(List<string> rightWords)
+		{
+			
+			if (rightWords.Contains(WordText))
 			{
 				_borderRawImage.color = BorderRight;
-				IsRight = isRight;
+				IsRight = true;
 			}
 			else
 			{
-				IsRight = isRight;
+				IsRight = false;
 				_borderRawImage.color = BorderWrong;
 			}
-			
-			IsSelected = true;
 		}
 
 		public void Deselect()
@@ -65,6 +81,7 @@ namespace _1._Project.Scripts.Button
 		
 		public void SetWordText(string wordText)
 		{
+			IsRight = false;
 			WordText = wordText;
 			_tmpGui.text = WordText;
 		}
