@@ -9,10 +9,8 @@ namespace _1._Project.Scripts.GameMechanics
 	{
 		private GameController _gameController;
 		public List<ButtonWord> WordButtons;
-		public ButtonWord ButtonSelected1;
-		public ButtonWord ButtonSelected2;
-		public ButtonWord ButtonSelected3;
-		public ButtonWord ButtonSelected4;
+		public List<ButtonWord> SelectedButtonWords;
+		public int MaxSelectCount = 4;
 		public int SelectCount;
 		private void Awake()
 		{
@@ -26,7 +24,7 @@ namespace _1._Project.Scripts.GameMechanics
 
 		public bool IsFinished()
 		{
-			return ButtonSelected1 != null && ButtonSelected2 != null && ButtonSelected3 != null && ButtonSelected4 != null;
+			return SelectedButtonWords.Count == MaxSelectCount;
 		}
 		private void OnClickWordHandler(ButtonWord arg1)
 		{
@@ -34,45 +32,16 @@ namespace _1._Project.Scripts.GameMechanics
 				return;
 
 			if (arg1.IsSelected)
-				return;
-			
-			switch (SelectCount)
 			{
-				case 0:
-					if (ButtonSelected1 != null)
-					{
-						ButtonSelected1.Deselect();
-					}
-					ButtonSelected1 = arg1;
-					SelectCount++;
-					break;
-				case 1:
-					if (ButtonSelected2 != null)
-					{
-						ButtonSelected2.Deselect();
-					}
-					ButtonSelected2 = arg1;
-					SelectCount =2;
-					break;
-				case 2:
-					if (ButtonSelected3 != null)
-					{
-						ButtonSelected3.Deselect();
-					}
-					ButtonSelected3 = arg1;
-					SelectCount =3;
-					break;
-				case 3:
-					if (ButtonSelected4 != null)
-					{
-						ButtonSelected4.Deselect();
-					}
-					ButtonSelected4 = arg1;
-					SelectCount =0;
-					break;
+				arg1.Deselect();
+				SelectedButtonWords.Remove(arg1);
+				SelectCount--;
+				return;
 			}
+			
+			SelectedButtonWords.Add(arg1);
+			SelectCount++;
 			arg1.Select();
-			//arg1.Select(_gameController.CheckIfWordIsRight(arg1.WordText));
 			_gameController.CheckIfFinished();
 
 		}
@@ -93,12 +62,17 @@ namespace _1._Project.Scripts.GameMechanics
 		}
 		public void ShowFinalResult(List<string> rightWords)
 		{
-			ButtonSelected1.CheckWord(rightWords);
-			ButtonSelected2.CheckWord(rightWords);
-			ButtonSelected3.CheckWord(rightWords);
-			ButtonSelected4.CheckWord(rightWords);
+			bool allRight = true;
 
-			if (ButtonSelected1.IsRight && ButtonSelected2.IsRight && ButtonSelected3.IsRight && ButtonSelected4.IsRight)
+			for (int i = 0; i < SelectedButtonWords.Count; i++)
+			{
+				SelectedButtonWords[i].CheckWord(rightWords);
+				if (!SelectedButtonWords[i].IsRight)
+				{
+					allRight = false;
+				}
+			}
+			if (allRight)
 			{
 				_gameController.RightWords();
 			}
@@ -114,10 +88,7 @@ namespace _1._Project.Scripts.GameMechanics
 			{
 				word.Deselect();
 			}
-			ButtonSelected1 = null;
-			ButtonSelected2 = null;
-			ButtonSelected3 = null;
-			ButtonSelected4 = null;
+			SelectedButtonWords.Clear();
 			SelectCount = 0;
 			UnlockSide();
 		}

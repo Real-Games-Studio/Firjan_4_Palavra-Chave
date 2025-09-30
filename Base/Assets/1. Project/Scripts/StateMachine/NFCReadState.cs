@@ -1,20 +1,22 @@
 ﻿using _1._Project.Scripts.Button;
+using UnityEngine;
 
 namespace _1._Project.Scripts.StateMachine
 {
-	public class GameState : BaseState
+	public class NFCReadState : BaseState
 	{
 		public override void StartState()
 		{
-			ScreenManager.CallScreen?.Invoke(StatesNames.GameStateName);
 			ButtonActions.OnClick += OnClickHandler;
+			ScreenManager.CallScreen?.Invoke(StatesNames.NFCReadStateName);
 		}
 
 		private void OnClickHandler(ButtonFunctionName obj)
 		{
-			if (obj == ButtonFunctionName.EndGame)
+			if (obj == ButtonFunctionName.NFCRead)
 			{
-				_applicationStateSystem.GoToNFC();
+				_applicationStateSystem.GoToFinal();
+				return;
 			}
 		}
 

@@ -139,7 +139,6 @@ namespace _1._Project.Scripts.GameMechanics
 		private void GameOver()
 		{
 			ButtonActions.OnClick?.Invoke(ButtonFunctionName.EndGame);
-			FinalPoints.SendPointsToServer(RightCount);
 		}
 
 		public void FillBoard1()

@@ -6,5 +6,6 @@ namespace _1._Project.Scripts.Button
 	{
 		public static Action<ButtonFunctionName> OnClick;
 		public static Action<ButtonWord> OnClickWord;
+		
 	}
 }

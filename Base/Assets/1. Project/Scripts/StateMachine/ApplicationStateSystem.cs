@@ -7,6 +7,7 @@ namespace _1._Project.Scripts.StateMachine
 	{
 		private readonly IBaseState _idleState = new IdleState();
 		private readonly IBaseState _gameState = new GameState();
+		private readonly IBaseState _nfcState = new NFCReadState();
 		private readonly IBaseState _finalState = new FinalState();
 		private IBaseState _currentState;
 		
@@ -18,6 +19,10 @@ namespace _1._Project.Scripts.StateMachine
 			SwitchState(_idleState);
 		}
 
+		public void GoToNFC()
+		{
+			SwitchState(_nfcState);
+		}
 		public void GoToGame()
 		{
 			SwitchState(_gameState);
@@ -59,6 +64,7 @@ namespace _1._Project.Scripts.StateMachine
 			_idleState.SetupState(this);
 			_gameState.SetupState(this);
 			_finalState.SetupState(this);
+			_nfcState.SetupState(this);
 		}
 	}
 
@@ -66,13 +72,15 @@ namespace _1._Project.Scripts.StateMachine
 	{
 		public const string IdleStateName = "IdleState";
 		public const string GameStateName = "GameState";
+		public const string NFCReadStateName = "NFCReadState";
 		public const string FinalStateName = "FinalState";
 		
 		public enum States
 		{
 			IdleState = 0,
 			GameState = 1,
-			FinalState = 2
+			FinalState = 2,
+			NFCState = 3
 		}
 		
 		public static States GetStateByName(string stateName)
@@ -85,6 +93,8 @@ namespace _1._Project.Scripts.StateMachine
 					return States.GameState;
 				case StatesNames.FinalStateName:
 					return States.FinalState;
+				case NFCReadStateName:
+					return States.NFCState;
 				default:
 					return States.IdleState;
 			}
@@ -99,6 +109,8 @@ namespace _1._Project.Scripts.StateMachine
 					return StatesNames.GameStateName;
 				case States.FinalState:
 					return StatesNames.FinalStateName;
+				case States.NFCState:
+					return NFCReadStateName;
 				default:
 					return null;
 			}

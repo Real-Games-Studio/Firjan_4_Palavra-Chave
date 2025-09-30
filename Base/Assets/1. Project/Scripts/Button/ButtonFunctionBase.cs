@@ -11,7 +11,6 @@ namespace _1._Project.Scripts.Button
 		
 		public virtual void OnClick()
 		{
-			Debug.Log(ButtonButtonFunction.ToString());
 			ButtonActions.OnClick?.Invoke(ButtonButtonFunction);
 		}
 
@@ -28,6 +27,7 @@ namespace _1._Project.Scripts.Button
 		StartGame,
 		ChooseWord,
 		EndGame,
+		NFCRead,
 		RestartGame
 	}
 }

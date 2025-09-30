@@ -1,4 +1,4 @@
-﻿using _1._Project.Scripts.GameMechanics;
+﻿ using _1._Project.Scripts.GameMechanics;
 
 namespace _1._Project.Scripts.CanvasScreen
 {
