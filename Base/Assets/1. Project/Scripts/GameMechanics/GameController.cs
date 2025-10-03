@@ -26,10 +26,13 @@ namespace _1._Project.Scripts.GameMechanics
 		public int RightCount;
 		public int WrongCount;
 		public int AtualBoard;
+		public int LevelCount;
 
 		public float TimeToReset = 3f;
 		public TextMeshProUGUI CountText;
 		public FinalPoints FinalPoints;
+		private List<int> _availableBoards = new List<int>{1,2,3,4,5,6,7};
+		private List<int> _allBoards = new List<int>{1,2,3,4,5,6,7};
 		private void Awake()
 		{
 			FillLists();
@@ -60,6 +63,18 @@ namespace _1._Project.Scripts.GameMechanics
 					break;
 				case 3:
 					CountText.text = $"Tema: {Group3Words.Category} \nAcertos: {RightCount}  Erros: {WrongCount}";
+					break;
+				case 4:
+					CountText.text = $"Tema: {Group4Words.Category} \nAcertos: {RightCount}  Erros: {WrongCount}";
+					break;
+				case 5:
+					CountText.text = $"Tema: {Group5Words.Category} \nAcertos: {RightCount}  Erros: {WrongCount}";
+					break;
+				case 6:
+					CountText.text = $"Tema: {Group6Words.Category} \nAcertos: {RightCount}  Erros: {WrongCount}";
+					break;
+				case 7:
+					CountText.text = $"Tema: {Group7Words.Category} \nAcertos: {RightCount}  Erros: {WrongCount}";
 					break;
 			}
 		}
@@ -100,6 +115,19 @@ namespace _1._Project.Scripts.GameMechanics
 					case 3:
 						BoardSide.ShowFinalResult(Group3Words.Words);
 						break;
+					case 4:
+						BoardSide.ShowFinalResult(Group4Words.Words);
+						break;
+					case 5:
+						BoardSide.ShowFinalResult(Group5Words.Words);
+						break;
+					case 6:
+						BoardSide.ShowFinalResult(Group6Words.Words);
+						break;
+					case 7:
+						BoardSide.ShowFinalResult(Group7Words.Words);
+						break;
+					
 				}
 			}
 			else
@@ -118,17 +146,27 @@ namespace _1._Project.Scripts.GameMechanics
 			Group6Words = JsonSystem.JsonModel.WordsGroup6;
 			Group7Words = JsonSystem.JsonModel.WordsGroup7;
 		}
-		
+
+		public void FillFirstBoard()
+		{
+			RightCount = 0;
+			WrongCount = 0;
+			LevelCount = 0;
+			_availableBoards.Clear();
+			_availableBoards.AddRange(_allBoards);
+			GetRandomBoard();
+		}
 		public void FillNextBoard()
 		{
 			WrongCount = 0;
-			switch (AtualBoard)
+			LevelCount++;
+			switch (LevelCount)
 			{
 				case 1:
-					FillBoard2();
+					GetRandomBoard();
 					break;
 				case 2:
-					FillBoard3();
+					GetRandomBoard();
 					break;
 				case 3:
 					GameOver();
@@ -136,6 +174,36 @@ namespace _1._Project.Scripts.GameMechanics
 			}
 		}
 
+		private void GetRandomBoard()
+		{
+			_availableBoards.Shuffle();
+			int nextBoard = _availableBoards[0];
+			switch (nextBoard)
+			{
+				case 1:
+					FillBoard1();
+					break;
+				case 2:
+					FillBoard2();
+					break;
+				case 3:
+					FillBoard3();
+					break;
+				case 4:
+					FillBoard4();
+					break;
+				case 5:
+					FillBoard5();
+					break;
+				case 6:
+					FillBoard6();
+					break;
+				case 7:
+					FillBoard7();
+					break;
+			}
+			_availableBoards.Remove(nextBoard);
+		}
 		private void GameOver()
 		{
 			ButtonActions.OnClick?.Invoke(ButtonFunctionName.EndGame);
@@ -199,6 +267,88 @@ namespace _1._Project.Scripts.GameMechanics
 			allWords.Add(Group5Words.Words[1]);
 			allWords.Add(Group6Words.Words[0]);
 			allWords.Add(Group7Words.Words[0]);
+			allWords.Add(Group1Words.Words[1]);
+			allWords.Shuffle();
+			BoardSide.SetUpSideWords(allWords);
+		}
+		public void FillBoard4()
+		{
+			AtualBoard = 4;
+			var allWords = new List<string>();
+			allWords.AddRange(Group4Words.Words);
+			allWords.Add(Group2Words.Words[0]);
+			allWords.Add(Group2Words.Words[1]);
+			allWords.Add(Group3Words.Words[1]);
+			allWords.Add(Group5Words.Words[0]);
+			allWords.Add(Group1Words.Words[0]);
+			allWords.Add(Group3Words.Words[0]);
+			allWords.Add(Group6Words.Words[1]);
+			allWords.Add(Group7Words.Words[1]);
+			allWords.Add(Group5Words.Words[1]);
+			allWords.Add(Group6Words.Words[0]);
+			allWords.Add(Group7Words.Words[0]);
+			allWords.Add(Group1Words.Words[1]);
+			allWords.Shuffle();
+			BoardSide.SetUpSideWords(allWords);
+		}
+		
+		public void FillBoard5()
+		{
+			AtualBoard = 5;
+			var allWords = new List<string>();
+			allWords.AddRange(Group5Words.Words);
+			allWords.Add(Group2Words.Words[0]);
+			allWords.Add(Group2Words.Words[1]);
+			allWords.Add(Group4Words.Words[1]);
+			allWords.Add(Group3Words.Words[0]);
+			allWords.Add(Group1Words.Words[0]);
+			allWords.Add(Group4Words.Words[0]);
+			allWords.Add(Group6Words.Words[1]);
+			allWords.Add(Group7Words.Words[1]);
+			allWords.Add(Group3Words.Words[1]);
+			allWords.Add(Group6Words.Words[0]);
+			allWords.Add(Group7Words.Words[0]);
+			allWords.Add(Group1Words.Words[1]);
+			allWords.Shuffle();
+			BoardSide.SetUpSideWords(allWords);
+		}
+		
+		public void FillBoard6()
+		{
+			AtualBoard = 6;
+			var allWords = new List<string>();
+			allWords.AddRange(Group6Words.Words);
+			allWords.Add(Group2Words.Words[0]);
+			allWords.Add(Group2Words.Words[1]);
+			allWords.Add(Group4Words.Words[1]);
+			allWords.Add(Group5Words.Words[0]);
+			allWords.Add(Group1Words.Words[0]);
+			allWords.Add(Group4Words.Words[0]);
+			allWords.Add(Group3Words.Words[1]);
+			allWords.Add(Group7Words.Words[1]);
+			allWords.Add(Group5Words.Words[1]);
+			allWords.Add(Group3Words.Words[0]);
+			allWords.Add(Group7Words.Words[0]);
+			allWords.Add(Group1Words.Words[1]);
+			allWords.Shuffle();
+			BoardSide.SetUpSideWords(allWords);
+		}
+		public void FillBoard7()
+		{
+			AtualBoard = 7;
+			var allWords = new List<string>();
+			allWords.AddRange(Group7Words.Words);
+			allWords.Add(Group2Words.Words[0]);
+			allWords.Add(Group2Words.Words[1]);
+			allWords.Add(Group4Words.Words[1]);
+			allWords.Add(Group5Words.Words[0]);
+			allWords.Add(Group1Words.Words[0]);
+			allWords.Add(Group4Words.Words[0]);
+			allWords.Add(Group6Words.Words[1]);
+			allWords.Add(Group3Words.Words[1]);
+			allWords.Add(Group5Words.Words[1]);
+			allWords.Add(Group6Words.Words[0]);
+			allWords.Add(Group3Words.Words[0]);
 			allWords.Add(Group1Words.Words[1]);
 			allWords.Shuffle();
 			BoardSide.SetUpSideWords(allWords);

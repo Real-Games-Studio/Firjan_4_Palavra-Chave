@@ -9,7 +9,7 @@ namespace _1._Project.Scripts.CanvasScreen
 
 		public override void TurnOn()
 		{
-			GameController.FillBoard1();
+			GameController.FillFirstBoard();
 			base.TurnOn();
 		}
 	}

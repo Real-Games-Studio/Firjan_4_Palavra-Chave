@@ -26,7 +26,6 @@ namespace _1._Project.Scripts.GameMechanics
 			LastNFCConnected = nfcId;
 			ButtonActions.OnClick?.Invoke(ButtonFunctionName.NFCRead);
 			SendPointsToServer(GameController.RightCount);
-
 		}
 
 		public async void SendPointsToServer(int points)

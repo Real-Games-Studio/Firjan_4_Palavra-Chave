@@ -43,13 +43,22 @@ namespace _4._NFC_Firjan.Scripts.Server
 		/// <returns>Codigo de status do update ao server <see cref="HttpStatusCode"/></returns>
 		public async Task<HttpStatusCode> UpdateNfcInfoFromGame(GameModel gameInfo)
 		{
-			var url = GetFullNfcUrl(gameInfo.nfcId);
-			var request = new HttpRequestMessage(HttpMethod.Post, url);
-			var content = new StringContent(gameInfo.ToString());
-			request.Content = content; 
-			Debug.Log($"Sending to {url}:{request.Content?.ReadAsStringAsync().Result}");
-			var response = _client.SendAsync(request).Result;
-			return response.StatusCode;
+			try
+			{
+				var url = GetFullNfcUrl(gameInfo.nfcId);
+				var request = new HttpRequestMessage(HttpMethod.Post, url);
+				var content = new StringContent(gameInfo.ToString());
+				request.Content = content; 
+				Debug.Log($"Sending to {url}:{request.Content?.ReadAsStringAsync().Result}");
+				var response = _client.SendAsync(request).Result;
+				return response.StatusCode;
+
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine(e);
+				throw;
+			}
 		}
 
 		/// <summary>
