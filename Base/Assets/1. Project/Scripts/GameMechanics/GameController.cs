@@ -27,6 +27,8 @@ namespace _1._Project.Scripts.GameMechanics
 		public int WrongCount;
 		public int AtualBoard;
 		public int LevelCount;
+		
+		public int CurrentLanguage; // 0 - PT | 1 - EN
 
 		public float TimeToReset = 3f;
 		public TextMeshProUGUI CountText;
@@ -35,7 +37,7 @@ namespace _1._Project.Scripts.GameMechanics
 		private List<int> _allBoards = new List<int>{1,2,3,4,5,6,7};
 		private void Awake()
 		{
-			FillLists();
+			FillLists(0);
 			BoardSide.SetGameController(this);
 		}
 
@@ -136,19 +138,35 @@ namespace _1._Project.Scripts.GameMechanics
 			}
 		}
 
-		private void FillLists()
+		private void FillLists(int i)
 		{
-			Group1Words = JsonSystem.JsonModel.WordsGroup1;
-			Group2Words = JsonSystem.JsonModel.WordsGroup2;
-			Group3Words = JsonSystem.JsonModel.WordsGroup3;
-			Group4Words = JsonSystem.JsonModel.WordsGroup4;
-			Group5Words = JsonSystem.JsonModel.WordsGroup5;
-			Group6Words = JsonSystem.JsonModel.WordsGroup6;
-			Group7Words = JsonSystem.JsonModel.WordsGroup7;
+			if (i ==0)
+			{
+				Group1Words = JsonSystem.JsonModel.WordsPT.WordsGroup1;
+				Group2Words = JsonSystem.JsonModel.WordsPT.WordsGroup2;
+				Group3Words = JsonSystem.JsonModel.WordsPT.WordsGroup3;
+				Group4Words = JsonSystem.JsonModel.WordsPT.WordsGroup4;
+				Group5Words = JsonSystem.JsonModel.WordsPT.WordsGroup5;
+				Group6Words = JsonSystem.JsonModel.WordsPT.WordsGroup6;
+				Group7Words = JsonSystem.JsonModel.WordsPT.WordsGroup7;
+			}
+
+			if (i == 1)
+			{
+				Group1Words = JsonSystem.JsonModel.WordsEN.WordsGroup1;
+				Group2Words = JsonSystem.JsonModel.WordsEN.WordsGroup2;
+				Group3Words = JsonSystem.JsonModel.WordsEN.WordsGroup3;
+				Group4Words = JsonSystem.JsonModel.WordsEN.WordsGroup4;
+				Group5Words = JsonSystem.JsonModel.WordsEN.WordsGroup5;
+				Group6Words = JsonSystem.JsonModel.WordsEN.WordsGroup6;
+				Group7Words = JsonSystem.JsonModel.WordsEN.WordsGroup7;
+			}
 		}
 
-		public void FillFirstBoard()
+		public void FillFirstBoard(int lang)
 		{
+			FillLists(lang);
+			CurrentLanguage = lang;
 			RightCount = 0;
 			WrongCount = 0;
 			LevelCount = 0;

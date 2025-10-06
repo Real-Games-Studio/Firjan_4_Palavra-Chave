@@ -15,6 +15,15 @@ namespace _1._Project.Scripts.GameModels
 		public float FinalScreenTime;
 		[JsonProperty("TempoDeJogo")] 
 		public float TotalGameplayTime;
+		[JsonProperty("PalavrasPT")]
+		public WordsBaseModel WordsPT;
+		[JsonProperty("PalavrasEN")]
+		public WordsBaseModel WordsEN;
+	}
+	
+	public class WordsBaseModel
+	{
+		
 		[JsonProperty("PalavrasGrupo1")]
 		public WordsModel WordsGroup1;
 		[JsonProperty("PalavrasGrupo2")]
@@ -29,6 +38,5 @@ namespace _1._Project.Scripts.GameModels
 		public WordsModel WordsGroup6;
 		[JsonProperty("PalavrasGrupo7")]
 		public WordsModel WordsGroup7;
-		
 	}
 }

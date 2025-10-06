@@ -14,10 +14,10 @@ namespace _1._Project.Scripts.Button
 		private RectTransform _tMPRectTransform;
 		public bool IsSelected = false;
 		public bool IsRight;
-		public Color BorderRight;
-		public Color BorderWrong;
-		public Color BorderDefault;
-		public Color BorderSelected;
+		public Texture2D BorderRight;
+		public Texture2D BorderWrong;
+		public Texture2D BorderDefault;
+		public Texture2D BorderSelected;
 		private RawImage _borderRawImage;
 		private void OnValidate()
 		{
@@ -35,7 +35,7 @@ namespace _1._Project.Scripts.Button
 
 		public override void SetUp()
 		{
-			_borderRawImage = GetComponentsInChildren<RawImage>()[1];
+			_borderRawImage = GetComponent<RawImage>();
 			_gORectTransform = GetComponent<RectTransform>();
 			_tMPRectTransform = _tmpGui.GetComponent<RectTransform>();
 			base.SetUp();
@@ -54,7 +54,7 @@ namespace _1._Project.Scripts.Button
 		public void Select()
 		{
 			IsSelected = true;
-			_borderRawImage.color = BorderSelected;
+			_borderRawImage.texture = BorderSelected;
 		}
 
 		public void CheckWord(List<string> rightWords)
@@ -62,13 +62,13 @@ namespace _1._Project.Scripts.Button
 			
 			if (rightWords.Contains(WordText))
 			{
-				_borderRawImage.color = BorderRight;
+				_borderRawImage.texture = BorderRight;
 				IsRight = true;
 			}
 			else
 			{
 				IsRight = false;
-				_borderRawImage.color = BorderWrong;
+				_borderRawImage.texture = BorderWrong;
 			}
 		}
 
@@ -76,7 +76,7 @@ namespace _1._Project.Scripts.Button
 		{
 			IsSelected = false;
 			IsRight = false;
-			_borderRawImage.color = BorderDefault;
+			_borderRawImage.texture = BorderDefault;
 		}
 		
 		public void SetWordText(string wordText)
@@ -87,7 +87,7 @@ namespace _1._Project.Scripts.Button
 		}
 		public void SetUpGO()
 		{
-			_borderRawImage.color = BorderDefault;
+			_borderRawImage.texture = BorderDefault;
 			
 			SetTMPSize();
 		}

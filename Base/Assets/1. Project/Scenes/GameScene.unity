@@ -1098,6 +1098,7 @@ MonoBehaviour:
     editor_turnOn: 0
     editor_turnOff: 0
   GameController: {fileID: 1567814325}
+  Lang: 0
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,7 +1165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1120590959
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1582,7 +1583,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 77da348214e0de148867aca86f237006, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1693,14 +1694,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.89199996, g: 0.83134395, b: 0.83134395, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_RaycastPadding: {x: 20, y: 20, z: 20, w: 20}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 993552ce33c744a4f86b56f62c232d20, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2039,8 +2040,16 @@ PrefabInstance:
       value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 159212976281714285, guid: 872a234482cb52341bc48f5e2df02ce7, type: 3}
+      propertyPath: m_CellSize.x
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 159212976281714285, guid: 872a234482cb52341bc48f5e2df02ce7, type: 3}
+      propertyPath: m_CellSize.y
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 159212976281714285, guid: 872a234482cb52341bc48f5e2df02ce7, type: 3}
       propertyPath: m_Padding.m_Top
-      value: 150
+      value: 303
       objectReference: {fileID: 0}
     - target: {fileID: 398818629900640521, guid: 872a234482cb52341bc48f5e2df02ce7, type: 3}
       propertyPath: m_AnchorMax.y
