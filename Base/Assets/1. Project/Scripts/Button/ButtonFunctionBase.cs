@@ -28,6 +28,10 @@ namespace _1._Project.Scripts.Button
 		ChooseWord,
 		EndGame,
 		NFCRead,
-		RestartGame
+		RestartGame,
+		PTSelect,
+		ENSelect,
+		LibrasSelect,
+		ForceReset
 	}
 }

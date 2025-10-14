@@ -58,25 +58,25 @@ namespace _1._Project.Scripts.GameMechanics
 			switch (AtualBoard)
 			{
 				case 1:
-					CountText.text = $"Tema: {Group1Words.Category} \nAcertos: {RightCount}  Erros: {WrongCount}";
+					CountText.text = $"{Group1Words.Category}";
 					break;
 				case 2:
-					CountText.text = $"Tema: {Group2Words.Category} \nAcertos: {RightCount}  Erros: {WrongCount}";
+					CountText.text = $"{Group2Words.Category}";
 					break;
 				case 3:
-					CountText.text = $"Tema: {Group3Words.Category} \nAcertos: {RightCount}  Erros: {WrongCount}";
+					CountText.text = $"{Group3Words.Category}";
 					break;
 				case 4:
-					CountText.text = $"Tema: {Group4Words.Category} \nAcertos: {RightCount}  Erros: {WrongCount}";
+					CountText.text = $"{Group4Words.Category}";
 					break;
 				case 5:
-					CountText.text = $"Tema: {Group5Words.Category} \nAcertos: {RightCount}  Erros: {WrongCount}";
+					CountText.text = $"{Group5Words.Category}";
 					break;
 				case 6:
-					CountText.text = $"Tema: {Group6Words.Category} \nAcertos: {RightCount}  Erros: {WrongCount}";
+					CountText.text = $"{Group6Words.Category}";
 					break;
 				case 7:
-					CountText.text = $"Tema: {Group7Words.Category} \nAcertos: {RightCount}  Erros: {WrongCount}";
+					CountText.text = $"{Group7Words.Category}";
 					break;
 			}
 		}

@@ -1,11 +1,12 @@
 {
-  "IP" : "192.168.0.185",
+  "IP" : "192.168.0.212",
   "Porta" : 8080,
   "IdDoJogo" : 4,
   "applicationName": "MyApp",
   "TempoMaximoAfk": 120,
   "TempoMaximoTelaFinal": 5,
   "TempoDeJogo": 120,
+  "PalavrasPT": {
   "PalavrasGrupo1" : {
     "Tema" : "Bioma e Natureza",
     "Palavras" : ["Catinga", "Floresta", "Mar", "Pantanal"]
@@ -33,5 +34,34 @@
   "PalavrasGrupo7" : {
     "Tema" : "Espaço e Astronomia",
     "Palavras" : ["Planeta", "Estrela", "Órbita", "Galáxia"]
-  }
+  }},
+  "PalavrasEN": {
+    "PalavrasGrupo1" : {
+      "Tema" : "Biome and Nature",
+      "Palavras" : ["Desert", "Forest", "Sea", "Wetland"]
+    },
+    "PalavrasGrupo2" : {
+      "Tema" : "Technology and Digitalization",
+      "Palavras" : ["Data", "Network", "Code", "System"]
+    },
+    "PalavrasGrupo3" : {
+      "Tema" : "Society and Community",
+      "Palavras" : ["City", "Work", "Culture", "Mobility"]
+    },
+    "PalavrasGrupo4" : {
+      "Tema" : "Environment and Sustainability",
+      "Palavras" : ["Climate", "Energy", "Recycling", "Waste"]
+    },
+    "PalavrasGrupo5" : {
+      "Tema" : "Future Skills",
+      "Palavras" : ["Empathy", "Curiosity", "Leadership", "Creativity"]
+    },
+    "PalavrasGrupo6" : {
+      "Tema" : "Physics and Chemistry",
+      "Palavras" : ["Molecule", "Gravity", "Oxygen", "Inertia"]
+    },
+    "PalavrasGrupo7" : {
+      "Tema" : "Space and Astronomy",
+      "Palavras" : ["Planet", "Star", "Orbit", "Galaxy"]
+    }}
 }
