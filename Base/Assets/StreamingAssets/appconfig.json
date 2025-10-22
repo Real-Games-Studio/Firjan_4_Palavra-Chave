@@ -6,6 +6,9 @@
   "TempoMaximoAfk": 120,
   "TempoMaximoTelaFinal": 5,
   "TempoDeJogo": 120,
+  "PontuaçãoMaxima1": 8,
+  "PontuaçãoMaxima2": 7,
+  "PontuaçãoMaxima3": 6,
   "PalavrasPT": {
   "PalavrasGrupo1" : {
     "Tema" : "Bioma e Natureza",

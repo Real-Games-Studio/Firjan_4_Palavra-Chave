@@ -1,21 +1,32 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using _1._Project.Scripts.GameModels;
 using Newtonsoft.Json;
 using UnityEngine;
 
 namespace _1._Project.Scripts
 {
-	public static class JsonSystem
+	public class JsonSystem : MonoBehaviour
 	{
-		public static JsonModel JsonModel;
+		public JsonModel JsonModel;
+		
+		public static JsonSystem Instance;
 
-		static JsonSystem()
+		private void Awake()
 		{
-			LoadJson();
+			if (Instance == null)
+			{
+				Instance = this;
+				LoadJson();
+				DontDestroyOnLoad(this);
+			}
+			else
+			{
+				Destroy(gameObject);
+			}
 		}
 
-
-		private static void LoadJson()
+		private void LoadJson()
 		{
 			
 			string _jsonPath = "";

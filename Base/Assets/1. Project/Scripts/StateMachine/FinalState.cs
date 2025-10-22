@@ -8,7 +8,7 @@ namespace _1._Project.Scripts.StateMachine
 		public override void StartState()
 		{
 			ScreenManager.CallScreen?.Invoke(StatesNames.FinalStateName);
-			_timer = JsonSystem.JsonModel.FinalScreenTime;
+			_timer = JsonSystem.Instance.JsonModel.FinalScreenTime;
 		}
 		
 		public override void UpdateState()

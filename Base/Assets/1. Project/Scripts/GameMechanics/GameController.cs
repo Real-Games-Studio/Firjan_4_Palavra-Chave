@@ -35,6 +35,8 @@ namespace _1._Project.Scripts.GameMechanics
 		public FinalPoints FinalPoints;
 		private List<int> _availableBoards = new List<int>{1,2,3,4,5,6,7};
 		private List<int> _allBoards = new List<int>{1,2,3,4,5,6,7};
+
+		public List<GameObject> Erros;
 		private void Awake()
 		{
 			FillLists(0);
@@ -50,6 +52,10 @@ namespace _1._Project.Scripts.GameMechanics
 		public void WrongWords()
 		{
 			WrongCount++;
+			for (int i = 0; i < WrongCount; i++)
+			{
+				Erros[i].SetActive(true);
+			}
 			StartCoroutine(WaitToResetLose());
 		}
 
@@ -142,24 +148,24 @@ namespace _1._Project.Scripts.GameMechanics
 		{
 			if (i ==0)
 			{
-				Group1Words = JsonSystem.JsonModel.WordsPT.WordsGroup1;
-				Group2Words = JsonSystem.JsonModel.WordsPT.WordsGroup2;
-				Group3Words = JsonSystem.JsonModel.WordsPT.WordsGroup3;
-				Group4Words = JsonSystem.JsonModel.WordsPT.WordsGroup4;
-				Group5Words = JsonSystem.JsonModel.WordsPT.WordsGroup5;
-				Group6Words = JsonSystem.JsonModel.WordsPT.WordsGroup6;
-				Group7Words = JsonSystem.JsonModel.WordsPT.WordsGroup7;
+				Group1Words = JsonSystem.Instance.JsonModel.WordsPT.WordsGroup1;
+				Group2Words = JsonSystem.Instance.JsonModel.WordsPT.WordsGroup2;
+				Group3Words = JsonSystem.Instance.JsonModel.WordsPT.WordsGroup3;
+				Group4Words = JsonSystem.Instance.JsonModel.WordsPT.WordsGroup4;
+				Group5Words = JsonSystem.Instance.JsonModel.WordsPT.WordsGroup5;
+				Group6Words = JsonSystem.Instance.JsonModel.WordsPT.WordsGroup6;
+				Group7Words = JsonSystem.Instance.JsonModel.WordsPT.WordsGroup7;
 			}
 
 			if (i == 1)
 			{
-				Group1Words = JsonSystem.JsonModel.WordsEN.WordsGroup1;
-				Group2Words = JsonSystem.JsonModel.WordsEN.WordsGroup2;
-				Group3Words = JsonSystem.JsonModel.WordsEN.WordsGroup3;
-				Group4Words = JsonSystem.JsonModel.WordsEN.WordsGroup4;
-				Group5Words = JsonSystem.JsonModel.WordsEN.WordsGroup5;
-				Group6Words = JsonSystem.JsonModel.WordsEN.WordsGroup6;
-				Group7Words = JsonSystem.JsonModel.WordsEN.WordsGroup7;
+				Group1Words = JsonSystem.Instance.JsonModel.WordsEN.WordsGroup1;
+				Group2Words = JsonSystem.Instance.JsonModel.WordsEN.WordsGroup2;
+				Group3Words = JsonSystem.Instance.JsonModel.WordsEN.WordsGroup3;
+				Group4Words = JsonSystem.Instance.JsonModel.WordsEN.WordsGroup4;
+				Group5Words = JsonSystem.Instance.JsonModel.WordsEN.WordsGroup5;
+				Group6Words = JsonSystem.Instance.JsonModel.WordsEN.WordsGroup6;
+				Group7Words = JsonSystem.Instance.JsonModel.WordsEN.WordsGroup7;
 			}
 		}
 
@@ -170,6 +176,10 @@ namespace _1._Project.Scripts.GameMechanics
 			RightCount = 0;
 			WrongCount = 0;
 			LevelCount = 0;
+			for (int i = 0; i < Erros.Count; i++)
+			{
+				Erros[i].SetActive(false);
+			}
 			_availableBoards.Clear();
 			_availableBoards.AddRange(_allBoards);
 			GetRandomBoard();
@@ -177,6 +187,10 @@ namespace _1._Project.Scripts.GameMechanics
 		public void FillNextBoard()
 		{
 			WrongCount = 0;
+			for (int i = 0; i < Erros.Count; i++)
+			{
+				Erros[i].SetActive(false);
+			}
 			LevelCount++;
 			switch (LevelCount)
 			{
