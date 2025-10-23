@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using _1._Project.Scripts.Lang;
 using UnityEngine;
 using UnityEngine.UI;
 

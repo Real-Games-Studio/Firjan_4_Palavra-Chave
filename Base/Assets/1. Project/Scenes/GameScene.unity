@@ -2940,6 +2940,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 886015447}
   m_CullTransparentMesh: 1
+--- !u!1 &911475151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 911475152}
+  - component: {fileID: 911475153}
+  m_Layer: 0
+  m_Name: LangSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &911475152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911475151}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1268018938}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &911475153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911475151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4be160e335948babc4090e29778b5c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameTile: {fileID: 0}
+  StartButton: {fileID: 446380565}
+  CTADetails: {fileID: 916190085}
+  GameDescription: {fileID: 921853388}
+  ReadNFCTitleWin: {fileID: 1181347284}
+  ReadNFCDescriptionWin: {fileID: 1888198193}
+  ReadNFCTitleLose: {fileID: 0}
+  ReadNFCDescriptionLose: {fileID: 0}
+  ScanCard: {fileID: 2130847986}
+  Skill1Name: {fileID: 1481582158}
+  Skill2Name: {fileID: 787730918}
+  Skill3Name: {fileID: 1717174727}
+  Skill1NameFinal: {fileID: 1697779779}
+  Skill2NameFinal: {fileID: 234000052}
+  Skill3NameFinal: {fileID: 1624516324}
+  FinalButton: {fileID: 425995308}
+  FinalTitle: {fileID: 237437067}
+  FinalDescription: {fileID: 1334172847}
 --- !u!1 &916190083
 GameObject:
   m_ObjectHideFlags: 0
@@ -3855,6 +3917,7 @@ Transform:
   - {fileID: 1780742099}
   - {fileID: 1840345059}
   - {fileID: 1914934963}
+  - {fileID: 911475152}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1334172845
@@ -5501,6 +5564,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d784184013747ce8e8e70370fee2ddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LanguageJsonModel:
+    GameTile:
+      PTText: 
+      ENText: 
+    StartButton:
+      PTText: 
+      ENText: 
+    CTADetails:
+      PTText: 
+      ENText: 
+    GameDescription:
+      PTText: 
+      ENText: 
+    ReadNFCTitleWin:
+      PTText: 
+      ENText: 
+    ReadNFCDescriptionWin:
+      PTText: 
+      ENText: 
+    ReadNFCTitleLose:
+      PTText: 
+      ENText: 
+    ReadNFCDescriptionLose:
+      PTText: 
+      ENText: 
+    ScanCard:
+      PTText: 
+      ENText: 
+    Skill1Name:
+      PTText: 
+      ENText: 
+    Skill2Name:
+      PTText: 
+      ENText: 
+    Skill3Name:
+      PTText: 
+      ENText: 
+    FinalButton:
+      PTText: 
+      ENText: 
+    FinalTitle:
+      PTText: 
+      ENText: 
+    FinalDescription:
+      PTText: 
+      ENText: 
 --- !u!1 &1990555658
 GameObject:
   m_ObjectHideFlags: 0

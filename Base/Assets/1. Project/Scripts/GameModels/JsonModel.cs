@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using Newtonsoft.Json;
 
 namespace _1._Project.Scripts.GameModels
 {
@@ -44,5 +45,48 @@ namespace _1._Project.Scripts.GameModels
 		public WordsModel WordsGroup6;
 		[JsonProperty("PalavrasGrupo7")]
 		public WordsModel WordsGroup7;
+	}
+
+	[Serializable]
+	public class LanguageJsonModel
+	{
+		[JsonProperty("TituloDoJogo")]
+		public LanguageModel GameTile;
+		[JsonProperty("BotãoDeComeçar")]
+		public LanguageModel StartButton;
+		[JsonProperty("DetalhesCTA")]
+		public LanguageModel CTADetails;
+		[JsonProperty("DescriçãoDoJogo")]
+		public LanguageModel GameDescription;
+		[JsonProperty("SeGanharTiuloLerNFC")]
+		public LanguageModel ReadNFCTitleWin;
+		[JsonProperty("SeGanharDescriçãoLerNFC")]
+		public LanguageModel ReadNFCDescriptionWin;
+		[JsonProperty("SePerderTituloLerNFC")]
+		public LanguageModel ReadNFCTitleLose;
+		[JsonProperty("SePerderDescriçãoLerNFC")]
+		public LanguageModel ReadNFCDescriptionLose;
+		[JsonProperty("LerCartão")]
+		public LanguageModel ScanCard;
+		[JsonProperty("NomeSkill1")]
+		public LanguageModel Skill1Name;
+		[JsonProperty("NomeSkill2")]
+		public LanguageModel Skill2Name;
+		[JsonProperty("NomeSkill3")]
+		public LanguageModel Skill3Name;
+		[JsonProperty("BotãoFinal")]
+		public LanguageModel FinalButton;
+		[JsonProperty("TituloFinal")]
+		public LanguageModel FinalTitle;
+		[JsonProperty("DescriçãoFinal")]
+		public LanguageModel FinalDescription;
+	}
+	[Serializable]
+	public class LanguageModel
+	{
+		[JsonProperty("PT")]
+		public string PTText;
+		[JsonProperty("EN")]
+		public string ENText;
 	}
 }

@@ -1,0 +1,62 @@
+﻿{
+  "TituloDoJogo": {
+    "PT": "Palavra-Chave",
+    "EN": "Key Word"
+  },
+  "BotãoDeComeçar": {
+    "PT": "COMEÇAR",
+    "EN": "START"
+  },
+  "DetalhesCTA": {
+    "PT": "Forme grupos de 4 palavras relacionadas para reconstruir o sistema antes do tempo acabar.",
+    "EN": "Form groups of 4 related words to rebuild the system before time runs out."
+  },
+  "DescriçãoDoJogo": {
+    "PT": "Encontre os pares de palavras relacionadas.",
+    "EN": "Find the pairs of related words."
+  },
+  "SeGanharTiuloLerNFC": {
+    "PT": "Parabéns!",
+    "EN": "Congratulations!"
+  },
+  "SeGanharDescriçãoLerNFC": {
+    "PT": "Você reconstruiu os códigos ocultos e \nrestaurou o sistema. \nSua missão revelou habilidades de Aprendizado Contínuo, Adaptabilidade e Resiliência, essenciais para enfrentar os desafios do futuro.\n",
+    "EN": "You have rebuilt the hidden codes and restored the system. Your mission revealed Continuous Learning, Adaptability, and Resilience — essential skills to face the challenges of the future."
+  },
+  "SePerderTituloLerNFC": {
+    "PT": "Tempo \nesgotado!",
+    "EN": "Time’s up!"
+  },
+  "SePerderDescriçãoLerNFC": {
+    "PT": " Respire fundo, observe com atenção e tente novamente.\n",
+    "EN": "Take a deep breath, focus, and try again."
+  },
+  "LerCartão": {
+    "PT": "Aproxime seu cartão",
+    "EN": "Tap your card"
+  },
+  "NomeSkill1": {
+    "PT": "aprendizado contínuo",
+    "EN": "Continuous Learning"
+  },
+  "NomeSkill2": {
+    "PT": "adaptabilidade",
+    "EN": "Adaptability"
+  },
+  "NomeSkill3": {
+    "PT": "resiliência",
+    "EN": "Resilience"
+  },
+  "BotãoFinal": {
+    "PT": "Finalizar",
+    "EN": "Finish"
+  },
+  "TituloFinal": {
+    "PT": "Obrigado!",
+    "EN": "Thank You!"
+  },
+  "DescriçãoFinal": {
+    "PT": "Seus dados foram gravados em seu perfil.",
+    "EN": "Your data has been saved to your profile."
+  }
+}
