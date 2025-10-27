@@ -11,60 +11,28 @@
   "PontuaçãoMaxima3": 6,
   "PalavrasPT": {
   "PalavrasGrupo1" : {
-    "Tema" : "Bioma e Natureza",
     "Palavras" : ["Catinga", "Floresta", "Mar", "Pantanal"]
   },
   "PalavrasGrupo2" : {
-    "Tema" : "Tecnologia e Digitalização",
     "Palavras" : ["Dados", "Rede", "Código", "Sistema"]
   },
   "PalavrasGrupo3" : {
-    "Tema" : "Sociedade e Comunidade",
     "Palavras" : ["Cidade", "Trabalho", "Cultura", "Mobilidade"]
   },
   "PalavrasGrupo4" : {
-    "Tema" : "Meio ambiente e Sustentabilidade",
     "Palavras" : ["Clima", "Energia", "Reciclagem", "Resíduo"]
-  },
-  "PalavrasGrupo5" : {
-    "Tema" : "Habilidades do Futuro",
-    "Palavras" : ["Empatia", "Curiosidade", "Liderança", "Criatividade"]
-  },
-  "PalavrasGrupo6" : {
-    "Tema" : "Física e Química",
-    "Palavras" : ["Molécula", "Gravidade", "Oxigênio", "Inércia"]
-  },
-  "PalavrasGrupo7" : {
-    "Tema" : "Espaço e Astronomia",
-    "Palavras" : ["Planeta", "Estrela", "Órbita", "Galáxia"]
   }},
   "PalavrasEN": {
     "PalavrasGrupo1" : {
-      "Tema" : "Biome and Nature",
       "Palavras" : ["Desert", "Forest", "Sea", "Wetland"]
     },
     "PalavrasGrupo2" : {
-      "Tema" : "Technology and Digitalization",
       "Palavras" : ["Data", "Network", "Code", "System"]
     },
     "PalavrasGrupo3" : {
-      "Tema" : "Society and Community",
       "Palavras" : ["City", "Work", "Culture", "Mobility"]
     },
     "PalavrasGrupo4" : {
-      "Tema" : "Environment and Sustainability",
       "Palavras" : ["Climate", "Energy", "Recycling", "Waste"]
-    },
-    "PalavrasGrupo5" : {
-      "Tema" : "Future Skills",
-      "Palavras" : ["Empathy", "Curiosity", "Leadership", "Creativity"]
-    },
-    "PalavrasGrupo6" : {
-      "Tema" : "Physics and Chemistry",
-      "Palavras" : ["Molecule", "Gravity", "Oxygen", "Inertia"]
-    },
-    "PalavrasGrupo7" : {
-      "Tema" : "Space and Astronomy",
-      "Palavras" : ["Planet", "Star", "Orbit", "Galaxy"]
     }}
 }

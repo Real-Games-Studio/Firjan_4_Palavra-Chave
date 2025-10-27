@@ -6,7 +6,7 @@ namespace _1._Project.Scripts.Button
 	public abstract class ButtonFunctionBase : MonoBehaviour, IButtonFunction
 	{
 		public ButtonFunctionName ButtonButtonFunction;
-		private UnityEngine.UI.Button _button;
+		internal UnityEngine.UI.Button _button;
 		
 		
 		public virtual void OnClick()

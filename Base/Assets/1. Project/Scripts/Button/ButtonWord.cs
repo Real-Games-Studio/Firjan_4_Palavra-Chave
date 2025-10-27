@@ -8,16 +8,18 @@ namespace _1._Project.Scripts.Button
 {
 	public class ButtonWord : ButtonFunctionBase
 	{
+		public int GroupId;
 		public string WordText;
 		[SerializeField] private TextMeshProUGUI _tmpGui;
 		private RectTransform _gORectTransform;
 		private RectTransform _tMPRectTransform;
 		public bool IsSelected = false;
 		public bool IsRight;
-		public Texture2D BorderRight;
-		public Texture2D BorderWrong;
-		public Texture2D BorderDefault;
-		public Texture2D BorderSelected;
+		public Color BorderRight;
+		public Color BorderWrong;
+		public Color BorderGroup;
+		public Color BorderDefault;
+		public Color BorderSelected;
 		private RawImage _borderRawImage;
 		private void OnValidate()
 		{
@@ -43,18 +45,19 @@ namespace _1._Project.Scripts.Button
 		
 		public void Lock()
 		{
-			GetComponent<UnityEngine.UI.Button>().interactable = false;
+			_button.interactable = false;
 		}
 
 		public void Unlock()
 		{
-			GetComponent<UnityEngine.UI.Button>().interactable = true;
+			_button.interactable = true;
+			_borderRawImage.color = BorderDefault;
 		}
 
 		public void Select()
 		{
 			IsSelected = true;
-			_borderRawImage.texture = BorderSelected;
+			_borderRawImage.color = BorderSelected;
 		}
 
 		public void CheckWord(List<string> rightWords)
@@ -62,21 +65,38 @@ namespace _1._Project.Scripts.Button
 			
 			if (rightWords.Contains(WordText))
 			{
-				_borderRawImage.texture = BorderRight;
+				_borderRawImage.color = BorderRight;
 				IsRight = true;
 			}
 			else
 			{
 				IsRight = false;
-				_borderRawImage.texture = BorderWrong;
+				_borderRawImage.color = BorderWrong;
 			}
+		}
+
+		public void ShowFinalLost()
+		{
+			_borderRawImage.color = BorderGroup;
+		}
+		public void ShowRight()
+		{
+			_borderRawImage.color = BorderGroup;
+			IsRight = true;
+			Lock();
+		}
+
+		public void ShowWrong()
+		{
+			IsRight = false;
+			_borderRawImage.color = BorderGroup;
 		}
 
 		public void Deselect()
 		{
 			IsSelected = false;
 			IsRight = false;
-			_borderRawImage.texture = BorderDefault;
+			_borderRawImage.color = BorderDefault;
 		}
 		
 		public void SetWordText(string wordText)
@@ -87,7 +107,7 @@ namespace _1._Project.Scripts.Button
 		}
 		public void SetUpGO()
 		{
-			_borderRawImage.texture = BorderDefault;
+			_borderRawImage.color = BorderDefault;
 			
 			SetTMPSize();
 		}

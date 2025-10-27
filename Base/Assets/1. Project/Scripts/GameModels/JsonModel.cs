@@ -39,12 +39,6 @@ namespace _1._Project.Scripts.GameModels
 		public WordsModel WordsGroup3;
 		[JsonProperty("PalavrasGrupo4")]
 		public WordsModel WordsGroup4;
-		[JsonProperty("PalavrasGrupo5")]
-		public WordsModel WordsGroup5;
-		[JsonProperty("PalavrasGrupo6")]
-		public WordsModel WordsGroup6;
-		[JsonProperty("PalavrasGrupo7")]
-		public WordsModel WordsGroup7;
 	}
 
 	[Serializable]

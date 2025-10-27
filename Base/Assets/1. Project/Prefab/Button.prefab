@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 4dfa6d7e8439bf14ab74c0e4059367b5, type: 3}
+  m_Texture: {fileID: 2800000, guid: deee72155109449498d22234953718b5, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -132,14 +132,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonButtonFunction: 1
+  GroupId: 0
   WordText: 
   _tmpGui: {fileID: 7381868990739196272}
   IsSelected: 0
   IsRight: 0
-  BorderRight: {fileID: 2800000, guid: 9a7239c924bb2a147a395068a75087f9, type: 3}
-  BorderWrong: {fileID: 2800000, guid: 8643855f6182a2842bfd203f79aed5cd, type: 3}
-  BorderDefault: {fileID: 2800000, guid: 4dfa6d7e8439bf14ab74c0e4059367b5, type: 3}
-  BorderSelected: {fileID: 2800000, guid: 4c07010faa462a44397597bfd1ee9e93, type: 3}
+  BorderRight: {r: 0.0627451, g: 0.6784314, b: 0.41960788, a: 1}
+  BorderWrong: {r: 0.6901961, g: 0.36078432, b: 0.34509805, a: 1}
+  BorderGroup: {r: 1, g: 1, b: 1, a: 1}
+  BorderDefault: {r: 0.0627451, g: 0.6509804, b: 0.6784314, a: 1}
+  BorderSelected: {r: 0.050980397, g: 0.5254902, b: 0.5372549, a: 1}
 --- !u!1 &8610500560610926988
 GameObject:
   m_ObjectHideFlags: 0

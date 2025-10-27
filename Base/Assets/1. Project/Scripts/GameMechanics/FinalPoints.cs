@@ -3,6 +3,7 @@ using _1._Project.Scripts.Button;
 using _4._NFC_Firjan.Scripts.Server;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace _1._Project.Scripts.GameMechanics
@@ -51,9 +52,12 @@ namespace _1._Project.Scripts.GameMechanics
 			switch (points)
 			{
 				case 0:
-					Bar1.fillAmount = 0;
-					Bar2.fillAmount = 0;
-					Bar3.fillAmount = 0;
+					Bar1.fillAmount = Percent(0,_maxPoint1);
+					Bar1NFC.fillAmount = Percent(0,_maxPoint1);
+					Bar2.fillAmount = Percent(0,_maxPoint2);
+					Bar2NFC.fillAmount = Percent(0,_maxPoint2);
+					Bar3.fillAmount = Percent(0,_maxPoint3);
+					Bar3NFC.fillAmount = Percent(0,_maxPoint3);
 					break;
 				case 1:
 					Bar1.fillAmount = Percent(6,_maxPoint1);
