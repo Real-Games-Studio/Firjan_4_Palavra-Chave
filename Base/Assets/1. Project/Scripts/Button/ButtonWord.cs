@@ -81,6 +81,7 @@ namespace _1._Project.Scripts.Button
 		}
 		public void ShowRight()
 		{
+			IsSelected = false;
 			_borderRawImage.color = BorderGroup;
 			IsRight = true;
 			Lock();
@@ -88,6 +89,7 @@ namespace _1._Project.Scripts.Button
 
 		public void ShowWrong()
 		{
+			IsSelected = false;
 			IsRight = false;
 			_borderRawImage.color = BorderGroup;
 		}

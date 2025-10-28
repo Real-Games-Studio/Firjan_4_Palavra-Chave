@@ -87,6 +87,7 @@ namespace _1._Project.Scripts.GameMechanics
 		{
 			RightCount = 0;
 			WrongCount = 0;
+			SideController.ResetSide();
 			ErrorUI.ResetErrors();
 		}
 		private void FillLists()

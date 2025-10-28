@@ -16,12 +16,36 @@ namespace _1._Project.Scripts.GameModels
 		public float FinalScreenTime;
 		[JsonProperty("TempoDeJogo")] 
 		public float TotalGameplayTime;
-		[JsonProperty("PontuaçãoMaxima1")]
+		[JsonProperty("PontuaçãoMaximaHabilidade1")]
 		public int MaxPoints1;
-		[JsonProperty("PontuaçãoMaxima2")]
+		[JsonProperty("PontuaçãoMaximaHabilidade2")]
 		public int MaxPoints2;
-		[JsonProperty("PontuaçãoMaxima3")]
+		[JsonProperty("PontuaçãoMaximaHabilidade3")]
 		public int MaxPoints3;
+		[JsonProperty("Pontuação1AcertoHabilidade1")] 
+		public int Points1RightAbility1;
+		[JsonProperty("Pontuação1AcertoHabilidade2")] 
+		public int Points1RightAbility2;
+		[JsonProperty("Pontuação1AcertoHabilidade3")] 
+		public int Points1RightAbility3;
+		[JsonProperty("Pontuação2AcertoHabilidade1")] 
+		public int Points2RightAbility1;
+		[JsonProperty("Pontuação2AcertoHabilidade2")] 
+		public int Points2RightAbility2;
+		[JsonProperty("Pontuação2AcertoHabilidade3")] 
+		public int Points2RightAbility3;
+		[JsonProperty("Pontuação3AcertoHabilidade1")] 
+		public int Points3RightAbility1;
+		[JsonProperty("Pontuação3AcertoHabilidade2")] 
+		public int Points3RightAbility2;
+		[JsonProperty("Pontuação3AcertoHabilidade3")] 
+		public int Points3RightAbility3;
+		[JsonProperty("Pontuação4AcertoHabilidade1")] 
+		public int Points4RightAbility1;
+		[JsonProperty("Pontuação4AcertoHabilidade2")] 
+		public int Points4RightAbility2;
+		[JsonProperty("Pontuação4AcertoHabilidade3")] 
+		public int Points4RightAbility3;
 		[JsonProperty("PalavrasPT")]
 		public WordsBaseModel WordsPT;
 		[JsonProperty("PalavrasEN")]

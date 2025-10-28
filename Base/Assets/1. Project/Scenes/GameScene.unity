@@ -6924,15 +6924,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3203227341494368967, guid: 6d7179e38af591547a1399fff0d40b93, type: 3}
       propertyPath: Group1Color.b
-      value: 1
+      value: 0.41099998
       objectReference: {fileID: 0}
     - target: {fileID: 3203227341494368967, guid: 6d7179e38af591547a1399fff0d40b93, type: 3}
       propertyPath: Group1Color.g
-      value: 0
+      value: 0.14483824
       objectReference: {fileID: 0}
     - target: {fileID: 3203227341494368967, guid: 6d7179e38af591547a1399fff0d40b93, type: 3}
       propertyPath: Group1Color.r
-      value: 0.9774451
+      value: 0.12843747
       objectReference: {fileID: 0}
     - target: {fileID: 3203227341494368967, guid: 6d7179e38af591547a1399fff0d40b93, type: 3}
       propertyPath: Group2Color.a
@@ -6940,15 +6940,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3203227341494368967, guid: 6d7179e38af591547a1399fff0d40b93, type: 3}
       propertyPath: Group2Color.b
-      value: 0.5018867
+      value: 0.5019608
       objectReference: {fileID: 0}
     - target: {fileID: 3203227341494368967, guid: 6d7179e38af591547a1399fff0d40b93, type: 3}
       propertyPath: Group2Color.g
-      value: 0
+      value: 0.15686275
       objectReference: {fileID: 0}
     - target: {fileID: 3203227341494368967, guid: 6d7179e38af591547a1399fff0d40b93, type: 3}
       propertyPath: Group2Color.r
-      value: 0.26176006
+      value: 0.36862746
       objectReference: {fileID: 0}
     - target: {fileID: 3203227341494368967, guid: 6d7179e38af591547a1399fff0d40b93, type: 3}
       propertyPath: Group3Color.a
@@ -6956,15 +6956,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3203227341494368967, guid: 6d7179e38af591547a1399fff0d40b93, type: 3}
       propertyPath: Group3Color.b
-      value: 0.9301733
+      value: 0.10196079
       objectReference: {fileID: 0}
     - target: {fileID: 3203227341494368967, guid: 6d7179e38af591547a1399fff0d40b93, type: 3}
       propertyPath: Group3Color.g
-      value: 1
+      value: 0.6509804
       objectReference: {fileID: 0}
     - target: {fileID: 3203227341494368967, guid: 6d7179e38af591547a1399fff0d40b93, type: 3}
       propertyPath: Group3Color.r
-      value: 0.40566033
+      value: 0.96470594
       objectReference: {fileID: 0}
     - target: {fileID: 3203227341494368967, guid: 6d7179e38af591547a1399fff0d40b93, type: 3}
       propertyPath: Group4Color.a
@@ -6972,15 +6972,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3203227341494368967, guid: 6d7179e38af591547a1399fff0d40b93, type: 3}
       propertyPath: Group4Color.b
-      value: 0
+      value: 0.28235295
       objectReference: {fileID: 0}
     - target: {fileID: 3203227341494368967, guid: 6d7179e38af591547a1399fff0d40b93, type: 3}
       propertyPath: Group4Color.g
-      value: 0.6754716
+      value: 0.20784315
       objectReference: {fileID: 0}
     - target: {fileID: 3203227341494368967, guid: 6d7179e38af591547a1399fff0d40b93, type: 3}
       propertyPath: Group4Color.r
-      value: 0.40920886
+      value: 0.92549026
       objectReference: {fileID: 0}
     - target: {fileID: 3203227341494368967, guid: 6d7179e38af591547a1399fff0d40b93, type: 3}
       propertyPath: _gameController

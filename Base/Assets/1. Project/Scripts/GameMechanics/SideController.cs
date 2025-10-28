@@ -144,8 +144,9 @@ namespace _1._Project.Scripts.GameMechanics
 			{
 				buttonWord.ShowRight();
 			}
-			
+
 			SelectedButtonWords.Clear();
+			SelectCount = 0;
 			StartCoroutine(ShowFeedBack());
 			
 		}
@@ -158,6 +159,7 @@ namespace _1._Project.Scripts.GameMechanics
 			}
 			
 			SelectedButtonWords.Clear();
+			SelectCount = 0;
 			StartCoroutine(ShowFeedBack());
 		}
 

@@ -6,10 +6,22 @@
   "TempoMaximoAfk": 120,
   "TempoMaximoTelaFinal": 5,
   "TempoDeJogo": 120,
-  "PontuaçãoMaxima1": 8,
-  "PontuaçãoMaxima2": 7,
-  "PontuaçãoMaxima3": 6,
-  "PalavrasPT": {
+  "PontuaçãoMaximaHabilidade1": 8,
+  "PontuaçãoMaximaHabilidade2": 7,
+  "PontuaçãoMaximaHabilidade3": 6,
+  "Pontuação1AcertoHabilidade1": 5,
+  "Pontuação1AcertoHabilidade2": 4,
+  "Pontuação1AcertoHabilidade3": 3,
+  "Pontuação2AcertoHabilidade1": 6,
+  "Pontuação2AcertoHabilidade2": 5,
+  "Pontuação2AcertoHabilidade3": 4,
+  "Pontuação3AcertoHabilidade1": 7,
+  "Pontuação3AcertoHabilidade2": 6,
+  "Pontuação3AcertoHabilidade3": 5,
+  "Pontuação4AcertoHabilidade1": 8,
+  "Pontuação4AcertoHabilidade2": 7,
+  "Pontuação4AcertoHabilidade3": 6,
+"PalavrasPT": {
   "PalavrasGrupo1" : {
     "Palavras" : ["Catinga", "Floresta", "Mar", "Pantanal"]
   },
