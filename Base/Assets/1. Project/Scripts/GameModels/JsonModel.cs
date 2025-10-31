@@ -22,30 +22,26 @@ namespace _1._Project.Scripts.GameModels
 		public int MaxPoints2;
 		[JsonProperty("PontuaçãoMaximaHabilidade3")]
 		public int MaxPoints3;
-		[JsonProperty("Pontuação1AcertoHabilidade1")] 
-		public int Points1RightAbility1;
-		[JsonProperty("Pontuação1AcertoHabilidade2")] 
-		public int Points1RightAbility2;
-		[JsonProperty("Pontuação1AcertoHabilidade3")] 
-		public int Points1RightAbility3;
-		[JsonProperty("Pontuação2AcertoHabilidade1")] 
-		public int Points2RightAbility1;
-		[JsonProperty("Pontuação2AcertoHabilidade2")] 
-		public int Points2RightAbility2;
-		[JsonProperty("Pontuação2AcertoHabilidade3")] 
-		public int Points2RightAbility3;
-		[JsonProperty("Pontuação3AcertoHabilidade1")] 
-		public int Points3RightAbility1;
-		[JsonProperty("Pontuação3AcertoHabilidade2")] 
-		public int Points3RightAbility2;
-		[JsonProperty("Pontuação3AcertoHabilidade3")] 
-		public int Points3RightAbility3;
-		[JsonProperty("Pontuação4AcertoHabilidade1")] 
-		public int Points4RightAbility1;
-		[JsonProperty("Pontuação4AcertoHabilidade2")] 
-		public int Points4RightAbility2;
-		[JsonProperty("Pontuação4AcertoHabilidade3")] 
-		public int Points4RightAbility3;
+		[JsonProperty("Pontuação1AcertoHabilidade1")]
+		public int Right1Points1;
+		[JsonProperty("Pontuação1AcertoHabilidade2")]
+		public int Right1Points2;
+		[JsonProperty("Pontuação1AcertoHabilidade3")]
+		public int Right1Points3;
+		[JsonProperty("Pontuação2AcertosHabilidade1")]
+		public int Right2Points1;
+		[JsonProperty("Pontuação2AcertosHabilidade2")]
+		public int Right2Points2;
+		[JsonProperty("Pontuação2AcertosHabilidade3")]
+		public int Right2Points3;
+		[JsonProperty("Pontuação3AcertosHabilidade1")]
+		public int Right3Points1;
+		[JsonProperty("Pontuação3AcertosHabilidade2")]
+		public int Right3Points2;
+		[JsonProperty("Pontuação3AcertosHabilidade3")]
+		public int Right3Points3;
+		[JsonProperty("PontoPerdidoPorErro")]
+		public int PointLostPerError;
 		[JsonProperty("PalavrasPT")]
 		public WordsBaseModel WordsPT;
 		[JsonProperty("PalavrasEN")]

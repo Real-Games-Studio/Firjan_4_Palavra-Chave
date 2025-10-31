@@ -18,6 +18,11 @@ namespace _1._Project.Scripts.StateMachine
 				_applicationStateSystem.GoToFinal();
 				return;
 			}
+
+			if (obj == ButtonFunctionName.ForceReset)
+			{
+				_applicationStateSystem.GoToIdle();
+			}
 		}
 
 

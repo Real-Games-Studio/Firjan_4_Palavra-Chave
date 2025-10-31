@@ -16,6 +16,11 @@ namespace _1._Project.Scripts.StateMachine
 			{
 				_applicationStateSystem.GoToNFC();
 			}
+
+			if (obj == ButtonFunctionName.ForceReset)
+			{
+				_applicationStateSystem.GoToIdle();
+			}
 		}
 
 
