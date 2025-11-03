@@ -58,5 +58,17 @@
   "DescriçãoFinal": {
     "PT": "Seus dados foram gravados em seu perfil.",
     "EN": "Your data has been saved to your profile."
-  }
+  },
+  "TextoPopUpSim":{
+  "PT": "Sim",
+  "EN": "Yes"
+},
+  "TextoPopUpNão":{
+  "PT": "Não",
+  "EN": "No"
+  },
+  "TextoPopUp":{
+    "PT": "deseja sair do jogo?",
+    "EN": "Do you want to exit the game?"
+}
 }

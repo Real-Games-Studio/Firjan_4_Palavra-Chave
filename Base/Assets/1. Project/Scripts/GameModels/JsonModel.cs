@@ -94,6 +94,12 @@ namespace _1._Project.Scripts.GameModels
 		public LanguageModel FinalTitle;
 		[JsonProperty("DescriçãoFinal")]
 		public LanguageModel FinalDescription;
+		[JsonProperty("TextoPopUpSim")]
+		public LanguageModel PopUpTextButtonYes;
+		[JsonProperty("TextoPopUpNão")]
+		public LanguageModel PopUpTextButtonNo;	
+		[JsonProperty("TextoPopUp")]
+		public LanguageModel PopUpTexts;
 	}
 	[Serializable]
 	public class LanguageModel

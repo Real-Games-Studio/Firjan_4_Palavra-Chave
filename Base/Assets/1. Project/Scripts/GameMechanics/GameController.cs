@@ -36,8 +36,9 @@ namespace _1._Project.Scripts.GameMechanics
 		public void StartGame(int lang)
 		{
 			_currentLang = lang;
-			ResetCounters();
+			FillLists();
 			FillBoard();
+			ResetCounters();
 		}
 
 		public void CheckIfFinished()

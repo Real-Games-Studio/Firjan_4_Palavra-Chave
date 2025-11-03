@@ -56,7 +56,7 @@ namespace _1._Project.Scripts.GameMechanics
 				_currentPointsAbility3 = 0;
 				return;
 			}
-
+			
 			if (GameController.RightCount == 1)
 			{
 				_currentPointsAbility1 = JsonSystem.Instance.JsonModel.Right1Points1;

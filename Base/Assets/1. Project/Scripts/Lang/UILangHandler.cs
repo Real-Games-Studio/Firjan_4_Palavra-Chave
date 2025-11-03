@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using _1._Project.Scripts.Accessibility;
 using _1._Project.Scripts.GameModels;
 using TMPro;
@@ -27,6 +28,9 @@ namespace _1._Project.Scripts.Lang
 		public TextMeshProUGUI FinalButton;
 		public TextMeshProUGUI FinalTitle;
 		public TextMeshProUGUI FinalDescription;
+		public List<TextMeshProUGUI> PopUpTexts = new List<TextMeshProUGUI>();
+		public List<TextMeshProUGUI> PopUpTextButtonYes = new List<TextMeshProUGUI>();
+		public List<TextMeshProUGUI> PopUpTextButtonNo = new List<TextMeshProUGUI>();
 
 		private void Awake()
 		{
@@ -53,6 +57,18 @@ namespace _1._Project.Scripts.Lang
 			FinalButton.ChangeLang(JsonSystem.Instance.LanguageJsonModel.FinalButton,obj);
 			FinalTitle.ChangeLang(JsonSystem.Instance.LanguageJsonModel.FinalTitle,obj);
 			FinalDescription.ChangeLang(JsonSystem.Instance.LanguageJsonModel.FinalDescription,obj);
+			for (int i = 0; i < PopUpTextButtonNo.Count; i++)
+			{
+				PopUpTextButtonNo[i].ChangeLang(JsonSystem.Instance.LanguageJsonModel.PopUpTextButtonNo,obj);
+			}
+			for (int i = 0; i < PopUpTextButtonYes.Count; i++)
+			{
+				PopUpTextButtonYes[i].ChangeLang(JsonSystem.Instance.LanguageJsonModel.PopUpTextButtonYes,obj);
+			}
+			for (int i = 0; i < PopUpTexts.Count; i++)
+			{
+				PopUpTexts[i].ChangeLang(JsonSystem.Instance.LanguageJsonModel.PopUpTexts,obj);
+			}
 		}
 
 		private void OnDestroy()
