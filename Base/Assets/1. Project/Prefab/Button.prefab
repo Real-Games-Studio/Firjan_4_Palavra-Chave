@@ -153,8 +153,8 @@ MonoBehaviour:
   BorderRight: {r: 0.0627451, g: 0.6784314, b: 0.41960788, a: 1}
   BorderWrong: {r: 0.6901961, g: 0.36078432, b: 0.34509805, a: 1}
   BorderGroup: {r: 1, g: 1, b: 1, a: 1}
-  BorderDefault: {r: 0.0627451, g: 0.6509804, b: 0.6784314, a: 1}
-  BorderSelected: {r: 0.050980397, g: 0.5254902, b: 0.5372549, a: 1}
+  BorderDefault: {r: 0.10666431, g: 0.7654818, b: 0.79622644, a: 1}
+  BorderSelected: {r: 0.032317538, g: 0.3285055, b: 0.335849, a: 1}
 --- !u!114 &3642241271095800688
 MonoBehaviour:
   m_ObjectHideFlags: 0
