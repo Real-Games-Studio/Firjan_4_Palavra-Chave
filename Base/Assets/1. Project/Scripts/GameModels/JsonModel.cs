@@ -15,7 +15,7 @@ namespace _1._Project.Scripts.GameModels
 		[JsonProperty("TempoMaximoTelaFinal")]
 		public float FinalScreenTime;
 		[JsonProperty("TempoDeJogo")] 
-		public float TotalGameplayTime;
+		public int TotalGameplayTime;
 		[JsonProperty("PontuaçãoMaximaHabilidade1")]
 		public int MaxPoints1;
 		[JsonProperty("PontuaçãoMaximaHabilidade2")]

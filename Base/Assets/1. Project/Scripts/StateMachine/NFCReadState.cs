@@ -5,9 +5,13 @@ namespace _1._Project.Scripts.StateMachine
 {
 	public class NFCReadState : BaseState
 	{
+		private float _timer;
+		private float _timeOut;
+		
 		public override void StartState()
 		{
 			ButtonActions.OnClick += OnClickHandler;
+			_timeOut = JsonSystem.Instance.JsonModel.MaxTimeAfk;
 			ScreenManager.CallScreen?.Invoke(StatesNames.NFCReadStateName);
 		}
 
@@ -25,6 +29,17 @@ namespace _1._Project.Scripts.StateMachine
 			}
 		}
 
+		public override void UpdateState()
+		{
+			if (_timer >= _timeOut)
+			{
+				_applicationStateSystem.GoToIdle();
+			}
+			else
+			{
+				_timer += Time.deltaTime;
+			}
+		}
 
 		public override void ExitState()
 		{

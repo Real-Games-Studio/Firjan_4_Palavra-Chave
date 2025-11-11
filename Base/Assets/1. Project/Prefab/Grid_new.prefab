@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5752237624786818961}
   - component: {fileID: 3203227341494368967}
   - component: {fileID: 6868288648260736600}
+  - component: {fileID: 1137647085812715488}
   m_Layer: 5
   m_Name: Grid_new
   m_TagString: Untagged
@@ -90,6 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 272ce9125aa14e3f8bb96cd72458c581, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameController: {fileID: 0}
   WordButtons:
   - {fileID: 3393410027644660034}
   - {fileID: 2037764059322561872}
@@ -110,6 +112,10 @@ MonoBehaviour:
   SelectedButtonWords: []
   MaxSelectCount: 4
   SelectCount: 0
+  Group1Color: {r: 0, g: 0, b: 0, a: 0}
+  Group2Color: {r: 0, g: 0, b: 0, a: 0}
+  Group3Color: {r: 0, g: 0, b: 0, a: 0}
+  Group4Color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &6868288648260736600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,6 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54bc91d669654738af79ab28bf4c5afd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ErrorUI: {fileID: 0}
   WordsGroup1:
     Words: []
   WordsGroup2:
@@ -132,9 +139,111 @@ MonoBehaviour:
     Words: []
   SideController: {fileID: 3203227341494368967}
   FinalPoints: {fileID: 0}
+  WinWords: []
+  LoseWords: []
   IsFinished: 0
   RightCount: 0
   WrongCount: 0
+  _gameTime: 40
+  SliderTimeBar: {fileID: 0}
+  TextTime: {fileID: 0}
+--- !u!82 &1137647085812715488
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2951153713115930255}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &794218316044341493
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -147,6 +256,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 3642241271095800688, guid: 133405351a157694e9817dee24b74406, type: 3}
+      propertyPath: AudioSource
+      value: 
+      objectReference: {fileID: 1137647085812715488}
     - target: {fileID: 8871219138202653493, guid: 133405351a157694e9817dee24b74406, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -260,6 +373,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 3642241271095800688, guid: 133405351a157694e9817dee24b74406, type: 3}
+      propertyPath: AudioSource
+      value: 
+      objectReference: {fileID: 1137647085812715488}
     - target: {fileID: 8871219138202653493, guid: 133405351a157694e9817dee24b74406, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -373,6 +490,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 3642241271095800688, guid: 133405351a157694e9817dee24b74406, type: 3}
+      propertyPath: AudioSource
+      value: 
+      objectReference: {fileID: 1137647085812715488}
     - target: {fileID: 8871219138202653493, guid: 133405351a157694e9817dee24b74406, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -486,6 +607,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3642241271095800688, guid: 133405351a157694e9817dee24b74406, type: 3}
+      propertyPath: AudioSource
+      value: 
+      objectReference: {fileID: 1137647085812715488}
     - target: {fileID: 8871219138202653493, guid: 133405351a157694e9817dee24b74406, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -599,6 +724,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 3642241271095800688, guid: 133405351a157694e9817dee24b74406, type: 3}
+      propertyPath: AudioSource
+      value: 
+      objectReference: {fileID: 1137647085812715488}
     - target: {fileID: 8871219138202653493, guid: 133405351a157694e9817dee24b74406, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -712,6 +841,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3642241271095800688, guid: 133405351a157694e9817dee24b74406, type: 3}
+      propertyPath: AudioSource
+      value: 
+      objectReference: {fileID: 1137647085812715488}
     - target: {fileID: 8871219138202653493, guid: 133405351a157694e9817dee24b74406, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -825,6 +958,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 3642241271095800688, guid: 133405351a157694e9817dee24b74406, type: 3}
+      propertyPath: AudioSource
+      value: 
+      objectReference: {fileID: 1137647085812715488}
     - target: {fileID: 8871219138202653493, guid: 133405351a157694e9817dee24b74406, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -938,6 +1075,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 3642241271095800688, guid: 133405351a157694e9817dee24b74406, type: 3}
+      propertyPath: AudioSource
+      value: 
+      objectReference: {fileID: 1137647085812715488}
     - target: {fileID: 8871219138202653493, guid: 133405351a157694e9817dee24b74406, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1051,6 +1192,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 3642241271095800688, guid: 133405351a157694e9817dee24b74406, type: 3}
+      propertyPath: AudioSource
+      value: 
+      objectReference: {fileID: 1137647085812715488}
     - target: {fileID: 8871219138202653493, guid: 133405351a157694e9817dee24b74406, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1164,6 +1309,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3642241271095800688, guid: 133405351a157694e9817dee24b74406, type: 3}
+      propertyPath: AudioSource
+      value: 
+      objectReference: {fileID: 1137647085812715488}
     - target: {fileID: 8871219138202653493, guid: 133405351a157694e9817dee24b74406, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1277,6 +1426,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 3642241271095800688, guid: 133405351a157694e9817dee24b74406, type: 3}
+      propertyPath: AudioSource
+      value: 
+      objectReference: {fileID: 1137647085812715488}
     - target: {fileID: 8871219138202653493, guid: 133405351a157694e9817dee24b74406, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1390,6 +1543,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3642241271095800688, guid: 133405351a157694e9817dee24b74406, type: 3}
+      propertyPath: AudioSource
+      value: 
+      objectReference: {fileID: 1137647085812715488}
     - target: {fileID: 8871219138202653493, guid: 133405351a157694e9817dee24b74406, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1503,6 +1660,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3642241271095800688, guid: 133405351a157694e9817dee24b74406, type: 3}
+      propertyPath: AudioSource
+      value: 
+      objectReference: {fileID: 1137647085812715488}
     - target: {fileID: 8871219138202653493, guid: 133405351a157694e9817dee24b74406, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1616,6 +1777,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3642241271095800688, guid: 133405351a157694e9817dee24b74406, type: 3}
+      propertyPath: AudioSource
+      value: 
+      objectReference: {fileID: 1137647085812715488}
     - target: {fileID: 8871219138202653493, guid: 133405351a157694e9817dee24b74406, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1729,6 +1894,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 3642241271095800688, guid: 133405351a157694e9817dee24b74406, type: 3}
+      propertyPath: AudioSource
+      value: 
+      objectReference: {fileID: 1137647085812715488}
     - target: {fileID: 8871219138202653493, guid: 133405351a157694e9817dee24b74406, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1842,6 +2011,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3642241271095800688, guid: 133405351a157694e9817dee24b74406, type: 3}
+      propertyPath: AudioSource
+      value: 
+      objectReference: {fileID: 1137647085812715488}
     - target: {fileID: 8871219138202653493, guid: 133405351a157694e9817dee24b74406, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

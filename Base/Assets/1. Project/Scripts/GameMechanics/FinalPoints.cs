@@ -31,6 +31,8 @@ namespace _1._Project.Scripts.GameMechanics
 		private int _currentPointsAbility1;
 		private int _currentPointsAbility2;
 		private int _currentPointsAbility3;
+		public AudioClip AudioClip;
+		public AudioSource AudioSource;
 		public void Start()
 		{
 			_pointLostPerError = JsonSystem.Instance.JsonModel.PointLostPerError;
@@ -90,6 +92,8 @@ namespace _1._Project.Scripts.GameMechanics
 		{
 			LastNFCConnected = nfcId;
 			ButtonActions.OnClick?.Invoke(ButtonFunctionName.NFCRead);
+			AudioSource.clip = AudioClip;
+			AudioSource.Play();
 			SendPointsToServer(GameController.RightCount);
 		}
 

@@ -6,6 +6,7 @@ using _1._Project.Scripts.CanvasScreen;
 using _1._Project.Scripts.GameModels;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace _1._Project.Scripts.GameMechanics
 {
@@ -19,7 +20,9 @@ namespace _1._Project.Scripts.GameMechanics
 		
 		public SideController SideController;
 		public FinalPoints FinalPoints;
-		
+
+		public List<GameObject> WinWords;
+		public List<GameObject> LoseWords;
 		public bool IsFinished;
 
 		public int RightCount;
@@ -28,6 +31,16 @@ namespace _1._Project.Scripts.GameMechanics
 		private float _timeToReset = 3f;
 		private int _currentLang;
 
+
+		public int _gameTime = 40;
+		private float _currentGameTime;
+		private bool _isPlaying;
+
+		public Image SliderTimeBar;
+		public TextMeshProUGUI TextTime;
+		public AudioSource AudioSource;
+		public AudioClip AudioWinClip;
+		public AudioClip AudioLoseClip;
 		private void Awake()
 		{
 			FillLists();
@@ -61,23 +74,71 @@ namespace _1._Project.Scripts.GameMechanics
 
 			if (WrongCount>=3)
 			{
+				_isPlaying = false;
 				StartCoroutine(ShowLostFeedBackAndOver());
 			}
 
 			if (RightCount >=4)
 			{
+				_isPlaying = false;
 				StartCoroutine(ShowWonFeedBackAndOver());
 			}
 		}
 
+		private void Update()
+		{
+			if (_isPlaying)
+			{
+				if (_currentGameTime > _gameTime)
+				{
+					GameOverTimeOut();
+				}
+				else
+				{
+					SliderTimeBar.fillAmount = 1 - (_currentGameTime / _gameTime);
+					TextTime.text = Mathf.CeilToInt(_gameTime - _currentGameTime).ToString();
+					_currentGameTime += Time.deltaTime;
+				}
+			}
+		}
+
+		private void GameOverTimeOut()
+		{
+			_isPlaying = false;
+			SideController.LockSide();
+			StartCoroutine(ShowLostFeedBackAndOver());
+		}
+
 		private IEnumerator ShowWonFeedBackAndOver()
 		{
+			AudioSource.clip = AudioWinClip;
+			AudioSource.Play();
+			foreach (var winWord in WinWords)
+			{
+				winWord.SetActive(true);
+			}
+
+			foreach (var loseWord in LoseWords)
+			{
+				loseWord.SetActive(false);
+			}
 			yield return new WaitForSecondsRealtime(5f);
 			ButtonActions.OnClick?.Invoke(ButtonFunctionName.EndGame);
 		}
 
 		private IEnumerator ShowLostFeedBackAndOver()
 		{
+			AudioSource.clip = AudioLoseClip;
+			AudioSource.Play();
+			foreach (var winWord in WinWords)
+			{
+				winWord.SetActive(false);
+			}
+
+			foreach (var loseWord in LoseWords)
+			{
+				loseWord.SetActive(true);
+			}
 			yield return new WaitForSecondsRealtime(1.1f);
 			SideController.ShowAllGroups();
 			yield return new WaitForSecondsRealtime(5f);
@@ -90,6 +151,9 @@ namespace _1._Project.Scripts.GameMechanics
 			WrongCount = 0;
 			SideController.ResetSide();
 			ErrorUI.ResetErrors();
+			_isPlaying = true;
+			_currentGameTime = 0;
+			_gameTime = JsonSystem.Instance.JsonModel.TotalGameplayTime;
 		}
 		private void FillLists()
 		{
