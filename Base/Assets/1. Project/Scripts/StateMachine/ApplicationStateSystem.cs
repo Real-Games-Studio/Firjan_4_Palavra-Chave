@@ -56,6 +56,7 @@ namespace _1._Project.Scripts.StateMachine
 			}
 			_currentState = nextState;
 			CurrentStateName = nextState.GetType().Name;
+			Debug.Log($"Switched to state: {CurrentStateName}");
 			_currentState.StartState();
 		}
 		

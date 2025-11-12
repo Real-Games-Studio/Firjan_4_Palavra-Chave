@@ -42,7 +42,8 @@ namespace _1._Project.Scripts.StateMachine
 		}
 
 		public override void ExitState()
-		{
+		{			
+			_timer = 0f;
 			ButtonActions.OnClick -= OnClickHandler;
 		}
 	}

@@ -8830,15 +8830,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3203227341494368967, guid: 6d7179e38af591547a1399fff0d40b93, type: 3}
       propertyPath: Group2Color.b
-      value: 0.5019608
+      value: 0.38823533
       objectReference: {fileID: 0}
     - target: {fileID: 3203227341494368967, guid: 6d7179e38af591547a1399fff0d40b93, type: 3}
       propertyPath: Group2Color.g
-      value: 0.15686275
+      value: 0.16078432
       objectReference: {fileID: 0}
     - target: {fileID: 3203227341494368967, guid: 6d7179e38af591547a1399fff0d40b93, type: 3}
       propertyPath: Group2Color.r
-      value: 0.36862746
+      value: 0.62352943
       objectReference: {fileID: 0}
     - target: {fileID: 3203227341494368967, guid: 6d7179e38af591547a1399fff0d40b93, type: 3}
       propertyPath: Group3Color.a

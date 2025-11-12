@@ -122,7 +122,7 @@ namespace _1._Project.Scripts.GameMechanics
 			{
 				loseWord.SetActive(false);
 			}
-			yield return new WaitForSecondsRealtime(5f);
+			yield return new WaitForSecondsRealtime(3f);
 			ButtonActions.OnClick?.Invoke(ButtonFunctionName.EndGame);
 		}
 
@@ -141,7 +141,7 @@ namespace _1._Project.Scripts.GameMechanics
 			}
 			yield return new WaitForSecondsRealtime(1.1f);
 			SideController.ShowAllGroups();
-			yield return new WaitForSecondsRealtime(5f);
+			yield return new WaitForSecondsRealtime(3f);
 			ButtonActions.OnClick?.Invoke(ButtonFunctionName.EndGame);
 		}
 
