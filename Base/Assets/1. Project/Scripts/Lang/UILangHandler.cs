@@ -10,7 +10,8 @@ namespace _1._Project.Scripts.Lang
 	public class UILangHandler : MonoBehaviour
 	{
 		
-		public TextMeshProUGUI GameTile;
+		public TextMeshProUGUI GameTile1;
+		public TextMeshProUGUI GameTile2;
 		public TextMeshProUGUI StartButton;
 		public TextMeshProUGUI CTADetails;
 		public TextMeshProUGUI GameDescription;
@@ -39,7 +40,8 @@ namespace _1._Project.Scripts.Lang
 
 		private void OnLangChangeHandler(Languages obj)
 		{
-			GameTile.ChangeLang(JsonSystem.Instance.LanguageJsonModel.GameTile,obj);
+			GameTile1.ChangeLang(JsonSystem.Instance.LanguageJsonModel.GameTile1,obj);
+			GameTile2.ChangeLang(JsonSystem.Instance.LanguageJsonModel.GameTile2,obj);
 			StartButton.ChangeLang(JsonSystem.Instance.LanguageJsonModel.StartButton,obj);
 			CTADetails.ChangeLang(JsonSystem.Instance.LanguageJsonModel.CTADetails,obj);
 			GameDescription.ChangeLang(JsonSystem.Instance.LanguageJsonModel.GameDescription,obj);

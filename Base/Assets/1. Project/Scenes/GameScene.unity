@@ -3022,7 +3022,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4be160e335948babc4090e29778b5c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameTile: {fileID: 0}
+  GameTile1: {fileID: 1447874917}
+  GameTile2: {fileID: 1440500906}
   StartButton: {fileID: 446380565}
   CTADetails: {fileID: 916190085}
   GameDescription: {fileID: 921853388}
@@ -6874,7 +6875,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LanguageJsonModel:
-    GameTile:
+    GameTile1:
+      PTText: 
+      ENText: 
+    GameTile2:
       PTText: 
       ENText: 
     StartButton:

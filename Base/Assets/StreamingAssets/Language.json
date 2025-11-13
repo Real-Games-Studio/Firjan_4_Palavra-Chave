@@ -1,7 +1,11 @@
 ﻿{
-  "TituloDoJogo": {
-    "PT": "Palavra-Chave",
-    "EN": "Key Word"
+  "TituloPrimeiraPalavra": {
+    "PT": "Palavra-",
+    "EN": "Key "
+  },
+  "TituloSegundaPalavra": {
+    "PT": "Chave",
+    "EN": "Word"
   },
   "BotãoDeComeçar": {
     "PT": "COMEÇAR",
@@ -12,8 +16,8 @@
     "EN": "Find the groups of 4 related words to rebuild the system before time runs out."
   },
   "DescriçãoDoJogo": {
-    "PT": "Encontre os pares de palavras relacionadas.",
-    "EN": "Find the pairs of related words."
+    "PT": "Encontre os grupos de palavras relacionadas.",
+    "EN": "Find the groups of related words."
   },
   "SeGanharTiuloLerNFC": {
     "PT": "Parabéns!",
@@ -24,8 +28,8 @@
     "EN": "You have rebuilt the hidden codes and restored the system. Your mission revealed Continuous Learning, Adaptability, and Resilience — essential skills to face the challenges of the future."
   },
   "SePerderTituloLerNFC": {
-    "PT": "Tempo \nesgotado!",
-    "EN": "Time’s up!"
+    "PT": "Fim de \njogo!",
+    "EN": "Game over!"
   },
   "SePerderDescriçãoLerNFC": {
     "PT": " Respire fundo, observe com atenção e tente novamente.\n",
@@ -60,15 +64,15 @@
     "EN": "Your data has been saved to your profile."
   },
   "TextoPopUpSim":{
-  "PT": "Sim",
-  "EN": "Yes"
-},
+    "PT": "Sim",
+    "EN": "Yes"
+  },
   "TextoPopUpNão":{
-  "PT": "Não",
-  "EN": "No"
+    "PT": "Não",
+    "EN": "No"
   },
   "TextoPopUp":{
     "PT": "deseja sair do jogo?",
     "EN": "Do you want to exit the game?"
-}
+  }
 }

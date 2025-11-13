@@ -64,8 +64,10 @@ namespace _1._Project.Scripts.GameModels
 	[Serializable]
 	public class LanguageJsonModel
 	{
-		[JsonProperty("TituloDoJogo")]
-		public LanguageModel GameTile;
+		[JsonProperty("TituloPrimeiraPalavra")]
+		public LanguageModel GameTile1;
+		[JsonProperty("TituloSegundaPalavra")]
+		public LanguageModel GameTile2;
 		[JsonProperty("BotãoDeComeçar")]
 		public LanguageModel StartButton;
 		[JsonProperty("DetalhesCTA")]
